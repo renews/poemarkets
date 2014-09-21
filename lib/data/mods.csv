@@ -1,0 +1,852 @@
+#% increased Stun Duration on enemies,FALSE,FALSE
+#% increased Physical Damage,TRUE,FALSE
+Adds #-# Physical Damage,TRUE,FALSE
+Adds #-# Fire Damage,TRUE,FALSE
+#% increased Critical Strike Chance,TRUE,FALSE
++# Life gained for each enemy hit by your Attacks,TRUE,FALSE
++# to Accuracy Rating,TRUE,FALSE
+#% increased Elemental Damage,FALSE,FALSE
++# to all Attributes,FALSE,FALSE
+#% increased Spell Damage,FALSE,FALSE
++# to Intelligence,TRUE,FALSE
+#% increased Spell Damage,TRUE,FALSE
+Adds #-# Lightning Damage,TRUE,FALSE
+#% increased Spell Damage,TRUE,TRUE
++#% to Fire Resistance,TRUE,FALSE
+#% increased Attack Speed,TRUE,FALSE
++# to Dexterity,FALSE,FALSE
++#% to Cold Resistance,TRUE,FALSE
+Insufficient Mana doesn't prevent your Melee Attacks,TRUE,FALSE
+#% increased Global Critical Strike Multiplier,TRUE,FALSE
+Your Physical Damage can Chill,TRUE,FALSE
+#% increased Cast Speed,TRUE,FALSE
+#% increased Global Critical Strike Multiplier,FALSE,FALSE
++# to maximum Mana,TRUE,FALSE
+#% increased Stun Duration on enemies,TRUE,FALSE
+#% increased Stun Duration on enemies,TRUE,TRUE
+#% increased Mana Regeneration Rate,TRUE,FALSE
++#% to all Elemental Resistances,TRUE,FALSE
++# to Strength,TRUE,FALSE
+#% of Physical Attack Damage Leeched as Life,TRUE,FALSE
+Area has # waves of monsters,TRUE,FALSE
+#% increased Energy Shield,TRUE,FALSE
+-#% to Fire Resistance,TRUE,FALSE
+Area has # seconds between monster waves,TRUE,FALSE
+#% of Physical Attack Damage Leeched as Mana,TRUE,FALSE
+Modifiers to Spell Damage also apply to Attack Damage,TRUE,FALSE
+#% Chance to Block,FALSE,FALSE
++# to Armour,TRUE,FALSE
++# to maximum Life,TRUE,FALSE
+#% increased Stun Recovery during flask effect,TRUE,FALSE
+Cannot Evade enemy Attacks,TRUE,FALSE
+#% reduced Enemy Stun Threshold,TRUE,FALSE
++# Life gained on Kill,TRUE,FALSE
++# to all Attributes,TRUE,FALSE
+#% of Physical Attack Damage Leeched as Life,FALSE,FALSE
++# to all Attributes,TRUE,TRUE
++# to Dexterity,TRUE,FALSE
+#% reduced Attribute Requirements,TRUE,FALSE
+#% increased Critical Strike Multiplier with Melee Weapons,TRUE,FALSE
++# to Dexterity,TRUE,TRUE
+#% increased Armour,TRUE,FALSE
+#% increased Physical Damage taken,TRUE,FALSE
+#% increased Evasion Rating,TRUE,FALSE
+Adds #-# Cold Damage,TRUE,FALSE
+#% of Physical Attack Damage Leeched as Life,TRUE,TRUE
++# Mana Gained on Kill,TRUE,FALSE
++#% to Lightning Resistance,TRUE,FALSE
+#% increased Projectile Speed,TRUE,FALSE
+#% increased Critical Strike Chance for Spells,TRUE,FALSE
+#% increased Global Critical Strike Chance,TRUE,FALSE
+#% increased Global Critical Strike Multiplier,TRUE,TRUE
++#% to all Elemental Resistances,FALSE,FALSE
+#% increased Rarity of Items found,TRUE,FALSE
+#% increased Global Critical Strike Chance,FALSE,FALSE
+#% increased Movement Speed,TRUE,FALSE
+#% additional Chance to Block while Dual Wielding,TRUE,FALSE
+#% reduced Character Size,TRUE,FALSE
+#% reduced Movement Speed when on Low Life,TRUE,FALSE
+#% increased Block and Stun Recovery,TRUE,FALSE
++#% to all Elemental Resistances,TRUE,TRUE
+Cannot be Stunned when on Low Life,TRUE,FALSE
+#% increased Global Critical Strike Chance,TRUE,TRUE
++# to Level of Fire Gems in this item,TRUE,FALSE
+#% reduced Damage when on Low Life,TRUE,FALSE
+#% increased Accuracy Rating,FALSE,FALSE
+#% increased Attack Speed when on Full Life,TRUE,FALSE
+#% increased Global Evasion Rating when on Low Life,TRUE,FALSE
+Reflects # Physical Damage to Melee Attackers,FALSE,FALSE
+#% increased Mana Regeneration Rate,FALSE,FALSE
+#% increased Movement Speed when on Low Life,TRUE,FALSE
+#% increased Armour and Evasion,TRUE,FALSE
+#% increased Evasion and Energy Shield,TRUE,FALSE
+Gems in this item are supported by level # Blind,TRUE,FALSE
+Minions have #% increased maximum Life,TRUE,FALSE
+Minions have #% increased Movement Speed,TRUE,FALSE
++# to maximum Energy Shield,TRUE,FALSE
+Minions deal #% increased Damage,TRUE,FALSE
+#% increased Lightning Damage,TRUE,FALSE
+#% increased Block and Stun Recovery,FALSE,FALSE
+# Life Regenerated per second,TRUE,FALSE
++# to Strength and Dexterity,FALSE,FALSE
+#% increased Quantity of Items found,TRUE,FALSE
+Cannot be Shocked,TRUE,FALSE
+#% chance to Blind enemies on hit,TRUE,FALSE
+#% increased Block and Stun Recovery,TRUE,TRUE
+#% increased Flask effect duration,TRUE,FALSE
+-# Physical Damage taken from Attacks,TRUE,FALSE
++# to Level of Minion Gems in this item,TRUE,FALSE
++# to Level of Gems in this item,TRUE,FALSE
+#% reduced Rarity of Items found,TRUE,FALSE
+#% increased Armour and Energy Shield,TRUE,FALSE
++#% to Chaos Resistance,TRUE,FALSE
++# to Intelligence,FALSE,FALSE
+Gems in this item are Supported by level # Elemental Proliferation,TRUE,FALSE
+Gems in this item are Supported by level # Trap,TRUE,FALSE
+#% reduced Cast Speed,TRUE,FALSE
++# to Evasion Rating,TRUE,FALSE
+#% increased Trap Throwing Speed,TRUE,FALSE
+Adds #-# Physical Damage,FALSE,FALSE
+#% increased Movement Speed for # seconds on Throwing a Trap,TRUE,FALSE
++# to Intelligence,TRUE,TRUE
+#% increased Rarity of Items found,FALSE,FALSE
+#% increased Effect of Auras on You,TRUE,FALSE
+Reflects # Physical Damage to Melee Attackers,TRUE,FALSE
+#% increased Effect of Auras on your Minions,TRUE,FALSE
+#% increased Mana Regeneration Rate,TRUE,TRUE
+Reflects # Physical Damage to Melee Attackers,TRUE,TRUE
+Spreads Tar when you take a Critical Strike,TRUE,FALSE
+#% increased Rarity of Items found,TRUE,TRUE
++# to Maximum number of Zombies,TRUE,FALSE
+#% increased maximum Energy Shield,TRUE,FALSE
++# to Maximum number of Spectres,TRUE,FALSE
+#% increased Movement Speed when on Full Life,TRUE,FALSE
+Adds #-# Physical Damage,TRUE,TRUE
+#% increased Movement Speed per Frenzy Charge,TRUE,FALSE
+#% reduced Attack and Cast Speed per Frenzy Charge,TRUE,FALSE
+#% of Life Regenerated per Second per Frenzy Charge,TRUE,FALSE
+#% Chance to gain a Frenzy Charge on Kill,TRUE,FALSE
+Gore Footprints,TRUE,FALSE
+#% increased Damage against Enemies on Low Life per Frenzy Charge,TRUE,FALSE
++# to Dexterity and Intelligence,FALSE,FALSE
+#% increased Rarity of Items found when on Low Life,TRUE,FALSE
+Gems in this item are Supported by level # Spell Totem,TRUE,FALSE
+#% increased Totem Life,TRUE,FALSE
+Can summon up to # additional totem,TRUE,FALSE
+Inflicts a random level # Curse on you when your Totems die,TRUE,FALSE
+#% reduced maximum Mana,TRUE,FALSE
+You gain # Evasion Rating when on Full Life,TRUE,FALSE
+Gain a Power Charge for each Enemy you hit with a Critical Strike,TRUE,FALSE
+#% increased Melee Damage,TRUE,FALSE
+Cannot Leech when on Low Life,TRUE,FALSE
++# to Strength,FALSE,FALSE
++# to Strength and Intelligence,FALSE,FALSE
++# to Strength,TRUE,TRUE
+#% increased maximum Life,TRUE,FALSE
+#% increased Flask Life Recovery rate,TRUE,FALSE
++#% to Lightning Resistance,FALSE,FALSE
++#% to Cold Resistance,FALSE,FALSE
++#% to Cold Resistance,TRUE,TRUE
+#% of Physical Damage Converted to Cold Damage,TRUE,FALSE
++#% to Lightning Resistance,TRUE,TRUE
+Reflects # Cold Damage to Melee Attackers,TRUE,FALSE
++# to Level of Melee Gems in this item,TRUE,FALSE
++#% to Chaos Resistance,FALSE,FALSE
+#% increased Elemental Resistances while on Low Life,TRUE,FALSE
+#% increased Elemental Damage with Weapons,TRUE,FALSE
+#% increased Physical Damage,FALSE,FALSE
+#% reduced Mana Cost of Skills when on Low Life,TRUE,FALSE
+#% increased Light Radius,TRUE,FALSE
+#% increased Mana Cost of Skills,TRUE,FALSE
+Blood Magic,TRUE,FALSE
++#% to Chaos Resistance,TRUE,TRUE
+#% of Block Chance applied to Spells,TRUE,FALSE
+#% increased Mana Recovery from Flasks,TRUE,FALSE
+#% increased Dexterity,TRUE,FALSE
+Gems in this item are Supported by level # Added Chaos Damage,TRUE,FALSE
+#% reduced maximum Life,TRUE,FALSE
+#% increased Fire Damage,TRUE,FALSE
+#% of Fire Damage Converted to Chaos Damage,TRUE,FALSE
++# to maximum Energy Shield,FALSE,FALSE
+#% increased Spell Damage taken when on Low Mana,TRUE,FALSE
++# to maximum Energy Shield,TRUE,TRUE
+#% increased Cold Damage,TRUE,FALSE
++#% to Fire Resistance,FALSE,FALSE
++#% to Fire Resistance,TRUE,TRUE
+Adds #-# Fire Damage,FALSE,FALSE
+#% of Physical Damage Converted to Fire Damage,TRUE,FALSE
+Adds #-# Lightning Damage,FALSE,FALSE
+#% increased Elemental Damage,TRUE,FALSE
+#% increased Elemental Damage,TRUE,TRUE
+Enemies can have # additional Curse,TRUE,FALSE
+#% increased Physical Damage,TRUE,TRUE
+#% increased Flask Charges gained,TRUE,FALSE
+Adds #-# Fire Damage,TRUE,TRUE
++# to maximum Life,FALSE,FALSE
++# to maximum Life,TRUE,TRUE
+Adds #-# Lightning Damage,TRUE,TRUE
+#% less Weapon Damage,TRUE,FALSE
+#% increased Damage,TRUE,FALSE
+#% increased maximum Mana,TRUE,FALSE
+#% reduced Flask Charges used,TRUE,FALSE
+#% reduced Experience gain,TRUE,FALSE
+#% increased Trap Damage,TRUE,FALSE
+#% increased Accuracy Rating,TRUE,FALSE
+#% increased Accuracy Rating,TRUE,TRUE
+#% reduced Trap Duration,TRUE,FALSE
+Traps trigger at the end of their Duration,TRUE,FALSE
+Uses both hand slots,TRUE,FALSE
+Cannot be Ignited,TRUE,FALSE
+Ignited Enemies Burn #% faster,TRUE,FALSE
+You can only deal Damage with this Weapon and Ignite,TRUE,FALSE
+#% chance to Knock enemies Back on Hit,TRUE,FALSE
+Deals #-# Physical Damage,TRUE,FALSE
+Trap lasts # seconds,TRUE,FALSE
++# to Level of Movement Gems in this item,TRUE,FALSE
+Locks enemy in place,TRUE,FALSE
+Cannot be Frozen,TRUE,FALSE
+#% increased Flask Mana Recovery rate,TRUE,FALSE
++# to Level of Strength Gems in this item,TRUE,FALSE
+Deals #% of Base Damage,TRUE,FALSE
+Culling Strike,TRUE,FALSE
+"When Dual Wielding, Deals #% Damage from each Weapon combined",TRUE,FALSE
+Base duration is # seconds,TRUE,FALSE
+Gems in this item are Supported by level # Increased Area of Effect,TRUE,FALSE
+Explosion deals base Fire Damage equal to #% of the corpse's maximum Life,TRUE,FALSE
+#% increased Area of Effect radius,TRUE,FALSE
+Reflects #% of Physical Damage dealt by Cursed Normal Enemies,TRUE,FALSE
+Reflects #% of Physical Damage dealt by Cursed Magic Enemies,TRUE,FALSE
++# to Weapon range,TRUE,FALSE
+Reflects #% of Physical Damage dealt by Cursed Rare Enemies,TRUE,FALSE
+Reflects #% of Physical Damage dealt by Cursed Unique Enemies,TRUE,FALSE
+#% chance to Curse Enemies with Enfeeble on Hit,TRUE,FALSE
+#% chance to Freeze enemies,TRUE,FALSE
+#% increased Freeze Duration on enemies,TRUE,FALSE
+#% increased Chill Duration on enemies,TRUE,FALSE
+Adds #-# Chaos Damage,TRUE,FALSE
+Totem lasts # seconds,TRUE,FALSE
+Summons a Totem which uses this Skill,TRUE,FALSE
+#% Chance to Cause Monsters to Flee,TRUE,FALSE
+Knocks enemies Back on Hit,TRUE,FALSE
+#% increased Totem Duration,TRUE,FALSE
+Totem deals #% less Damage,TRUE,FALSE
+You and nearby allies gain #% more Armour,TRUE,FALSE
+#% more Unarmed Physical Damage,TRUE,FALSE
+Extra gore,TRUE,FALSE
+-# Physical Damage taken from Projectile Attacks,TRUE,FALSE
+#% increased Armour against Projectiles,TRUE,FALSE
++#% additional Block Chance against Projectiles,TRUE,FALSE
+# additional Projectiles,TRUE,FALSE
+#% reduced Attack Speed,TRUE,FALSE
+#% of Physical Damage Converted to Lightning Damage,TRUE,FALSE
+#% less Projectile Damage,TRUE,FALSE
+#% chance of Projectiles Piercing,TRUE,FALSE
+#% reduced Light Radius,TRUE,FALSE
+Reflects #-# Lightning Damage to Attackers on Block,TRUE,FALSE
+#% increased Global Defences,TRUE,FALSE
+Elemental Resistances are Zero,TRUE,FALSE
+Deals # Base Fire Damage per second,TRUE,FALSE
+#% additional Block Chance,TRUE,FALSE
+#% increased Elemental Damage with Weapons,FALSE,FALSE
++# Life gained for each enemy hit by your Attacks,FALSE,FALSE
+#% increased Attack Speed when on Low Life,TRUE,FALSE
+Cursed enemies grant #% Increased Flask Charges,TRUE,FALSE
+Cursed enemies grant #% Life Leech to Physical Damage when Attacked,TRUE,FALSE
+Cursed enemies grant #% Mana Leech to Physical Damage when Attacked,TRUE,FALSE
+Cursed enemies have a #% chance to grant an Endurance Charge when slain,TRUE,FALSE
+#% More Bow Damage at Close Range,TRUE,FALSE
+Bow Knockback at Close Range,TRUE,FALSE
+#% increased Claw Physical Damage when on Low Life,TRUE,FALSE
+#% increased Accuracy Rating when on Low Life,TRUE,FALSE
+#% of Physical Damage Converted to Chaos Damage,TRUE,FALSE
+#% increased Attack Speed per Frenzy Charge,TRUE,FALSE
+Gain #% of Physical Damage as Extra Fire Damage,TRUE,FALSE
+#% of Physical Damage taken as Chaos Damage,TRUE,FALSE
+#% chance to Ignite enemies,TRUE,FALSE
++# Life gained for each enemy hit by Supported Attack,TRUE,FALSE
+#% increased Ignite Duration on enemies,TRUE,FALSE
+#% increased Burning Damage,TRUE,FALSE
+Gain #% of Physical Damage as Extra Chaos Damage,TRUE,FALSE
+Deals # Base Chaos Damage per second,TRUE,FALSE
+Never deal Critical Strikes,TRUE,FALSE
+#% increased Shock Duration on enemies,TRUE,FALSE
+#% chance to Shock,TRUE,FALSE
+Curse Reflection,TRUE,FALSE
+#% of Physical Damage from Attacks Leeched as Life,TRUE,FALSE
+Enemies Cannot Leech Life From You,TRUE,FALSE
+You lose #% of your Maximum Life per second as Chaos Damage,TRUE,FALSE
+Gain a Frenzy Charge on Kill,TRUE,FALSE
+Deals #-# Lightning Damage,TRUE,FALSE
+Additional #% Shield Block Chance,TRUE,FALSE
+You and nearby allies regenerate #% Life per second,TRUE,FALSE
+# additional Arrows,TRUE,FALSE
+You and nearby allies deal #-# additional Fire Damage with Attacks,TRUE,FALSE
+You and nearby allies gain #% additional Cold Resistance,TRUE,FALSE
+Deals #-# Fire Damage,TRUE,FALSE
+#% of Cold Damage Converted to Fire Damage,TRUE,FALSE
+One fireball falls every # seconds,TRUE,FALSE
+Projectiles have an additional #% chance to Pierce Cursed enemies,TRUE,FALSE
+Hits on Cursed Enemies have an additional #% chance to Knockback,TRUE,FALSE
+Cursed enemies have #% less Evasion against Projectile Attacks,TRUE,FALSE
+Cursed enemies take #% more Damage from Projectiles,TRUE,FALSE
+Deals #-# Cold Damage,TRUE,FALSE
+Causes Bleeding on Hit,TRUE,FALSE
+#% increased Duration ,TRUE,FALSE
+Bleeding targets take #% of the Physical Damage Dealt per second,TRUE,FALSE
+Bleeding targets take an additional #% of the Physical Damage Dealt per second while moving,TRUE,FALSE
++# maximum Endurance Charge,TRUE,FALSE
+Explosion deals # - # Base Fire damage per Fuse Charge,TRUE,FALSE
++# to Explosion Radius per Fuse Charge,TRUE,FALSE
+#% Less Movement Speed,TRUE,FALSE
+Second form has #% increased Critical Strike Chance,TRUE,FALSE
+# Life Regenerated per second,FALSE,FALSE
+You gain # Evasion Rating when on Low Life,TRUE,FALSE
+#% of Life Regenerated per Second while on Low Life,TRUE,FALSE
+# Life Regenerated per second,TRUE,TRUE
+#% reduced Projectile Speed,TRUE,FALSE
+Cursed enemies lose #% Lightning Resistance,TRUE,FALSE
+#% increased Damage when on Low Life,TRUE,FALSE
+Cursed enemies have +#% chance to be Shocked by Lightning Damage,TRUE,FALSE
+#% increased Projectile Damage,TRUE,FALSE
+Shocks on Cursed Enemies have #% increased Duration,TRUE,FALSE
+Cursed enemies have #% reduced Accuracy Rating,TRUE,FALSE
+# seconds between appearance of Wall sections,TRUE,FALSE
+Cursed enemies have #% reduced Critical Strike Chance,TRUE,FALSE
+Wall will be # units long,TRUE,FALSE
++# Life gained for each enemy hit by your Attacks,TRUE,TRUE
+Cursed enemies have #% reduced Critical Strike Multiplier,TRUE,FALSE
+Cursed enemies deal #% less Damage,TRUE,FALSE
+#% less Attack Speed,TRUE,FALSE
+Strength's damage bonus applies to Projectile Attacks made with Supported Skills,TRUE,FALSE
+Cursed enemies are #% slower,TRUE,FALSE
+Other effects on Cursed enemies expire #% slower,TRUE,FALSE
+#% increased Blinding duration,TRUE,FALSE
+Creates # Corpses,TRUE,FALSE
+Cursed enemies lose #% Cold Resistance,TRUE,FALSE
+Elemental Status Effects caused by supported Skills spread to other enemies,TRUE,FALSE
+Cursed enemies have +#% chance to be Frozen by Cold Damage,TRUE,FALSE
+Radius: #,TRUE,FALSE
+Freezes on Cursed Enemies have #% increased Duration,TRUE,FALSE
+Additional # Seconds Base Duration per Endurance Charge,TRUE,FALSE
+You and nearby allies gain #% increased Movement Speed,TRUE,FALSE
+You and nearby allies gain #% increased Attack Speed,TRUE,FALSE
+You and nearby allies gain #% increased Cast Speed,TRUE,FALSE
+#% more Physical Projectile Attack Damage,TRUE,FALSE
+#% less Projectile Attack Speed,TRUE,FALSE
+You and nearby allies gain # additional Energy Shield,TRUE,FALSE
+You and nearby allies deal #-# additional Lightning Damage with Attacks,TRUE,FALSE
+#% reduced maximum Energy Shield,TRUE,FALSE
+Cursed enemies have an additional #% chance to be Stunned,TRUE,FALSE
+Cursed enemies have #% reduced Block and Stun Recovery,TRUE,FALSE
+Cursed enemies have #% increased Energy Shield recharge delay,TRUE,FALSE
+#% reduced Movement Speed,TRUE,FALSE
+Cursed enemies have #% reduced Energy Shield Recharge rate,TRUE,FALSE
+Cursed enemies take #% more Physical damage,TRUE,FALSE
+Cursed enemies take #% increased damage from Damage Over Time effects,TRUE,FALSE
+Reflects # Chaos Damage to Melee Attackers,TRUE,FALSE
+#% chance on Block to create Desecrated Ground,TRUE,FALSE
++# to maximum Mana,FALSE,FALSE
+Cannot be Chilled,TRUE,FALSE
++# to maximum Mana,TRUE,TRUE
++# to maximum Mana,TRUE,TRUE
+"When Hit, #% of Damage is taken from Mana before Life",TRUE,FALSE
+Mind Over Matter,TRUE,FALSE
+#% chance to Ignite,TRUE,FALSE
+Reflects # Fire Damage to Melee Attackers,TRUE,FALSE
+#% of Physical Damage taken as Fire Damage,TRUE,FALSE
+#% increased Physical Damage with Weapons per Red Socket,TRUE,FALSE
+#% increased Global Attack Speed per Green Socket,TRUE,FALSE
+#% of Physical Attack Damage Leeched as Mana per Blue Socket,TRUE,FALSE
++# to Melee Weapon Range per White Socket,TRUE,FALSE
+#% increased Elemental Damage with Weapons,TRUE,TRUE
++#% to maximum Cold Resistance,TRUE,FALSE
+Cursed enemies have an additional #% chance to receive a Critical Strike,TRUE,FALSE
+Cursed enemies take #% more extra damage from Critical Strikes,TRUE,FALSE
+Conduit,TRUE,FALSE
+#% increased Radius of Area Skills,TRUE,FALSE
+#% increased Area Damage,TRUE,FALSE
++# to Level of Aura Gems in this item,TRUE,FALSE
+Supported Spells can only be Cast on Death,TRUE,FALSE
+#% chance to Cast Supported Spells on Death,TRUE,FALSE
+#% chance to Avoid being Chilled,TRUE,FALSE
+#% reduced Mana Reserved,TRUE,FALSE
+Supported Melee Attacks have a #% chance to Cast Supported Spells on Kill,TRUE,FALSE
+You cannot Cast Supported Spells directly,TRUE,FALSE
+#% chance to Cast Supported Spells when Stunned,TRUE,FALSE
+Penetrates #% Cold Resistance,TRUE,FALSE
+Supported Skills have a #% chance to apply Supported Curses on Hit,TRUE,FALSE
+Gain an Endurance Charge when an enemy Scores a Critical Strike on You,TRUE,FALSE
+You cannot Cast Supported Curses,TRUE,FALSE
+Share Endurance Charges with nearby party members,TRUE,FALSE
+Projectiles Fork,TRUE,FALSE
+#% increased Critical Strike Multiplier,TRUE,FALSE
+#% increased Movement Speed,FALSE,FALSE
+#% increased Skill Effect Duration,TRUE,FALSE
+Strength's damage bonus applies to Spell Damage as well for Supported Skills,TRUE,FALSE
+Penetrates #% Lightning Resistance,TRUE,FALSE
+#% of Damage Leeched as Mana,TRUE,FALSE
+No Physical Damage,TRUE,FALSE
+#% more Melee Physical Damage when on Full Life,TRUE,FALSE
+#% increased Fire Damage taken,TRUE,FALSE
+Culling Strike against Burning Enemies,TRUE,FALSE
+Gain a Frenzy Charge if an Attack Ignites an Enemy,TRUE,FALSE
+#% increased Movement Speed,TRUE,TRUE
+Gain a Frenzy Charge on Critical Strike,TRUE,FALSE
+Can set up to # additional traps,TRUE,FALSE
+Chests have #% increased Item Rarity,TRUE,FALSE
+Throw # additional Traps,TRUE,FALSE
+Area contains no monsters,TRUE,FALSE
+#% less Damage,TRUE,FALSE
+"Projectile Attacks deal up to #% more Damage to targets at the start of their movement, dealing less Damage to targets as the projectile travels further",TRUE,FALSE
+Supported Attack Skills cannot be used with Melee Weapons,TRUE,FALSE
+Mine deals #% more Damage,TRUE,FALSE
+Places a Remote Mine which uses this Skill when detonated,TRUE,FALSE
+Mine lasts # seconds,TRUE,FALSE
+Totems and Minions summoned by Supported Skills have +#% Fire Resistance,TRUE,FALSE
+Totems and Minions summoned by Supported Skills have +#% Cold Resistance,TRUE,FALSE
+Totems and Minions summoned by Supported Skills have +#% Lightning Resistance,TRUE,FALSE
++# to Level of Cold Gems in this item,TRUE,FALSE
+#% more Weapon Elemental Damage,TRUE,FALSE
++# to Level of Lightning Gems in this item,TRUE,FALSE
+-#% to Cold Resistance,TRUE,FALSE
+Arrows always Pierce,TRUE,FALSE
++#% to Cold and Lightning Resistances,FALSE,FALSE
+Cannot Leech,TRUE,FALSE
+#% chance on Block to create Consecrated Ground,TRUE,FALSE
+Enemies Cannot Leech Mana From You,TRUE,FALSE
+#% of Damage taken Gained as Mana when Hit,TRUE,FALSE
+Cannot Leech Mana,TRUE,FALSE
+Take # Physical Damage when hit by Attacks,TRUE,FALSE
+Pain Attunement,TRUE,FALSE
+Supported Attacks have a #% chance to Cast Supported Spells when you Crit an Enemy,TRUE,FALSE
+Can deal #-# base Fire damage,TRUE,FALSE
+Can deal #-# base Cold damage,TRUE,FALSE
+Can deal #-# base Lightning damage,TRUE,FALSE
+#% reduced Enemy Stun Threshold with this Weapon,TRUE,FALSE
+This Gem can only Support Skill Gems of Level # or lower,TRUE,FALSE
+Gems in this item have #% Chance to cause Enemies to Flee on Hit,TRUE,FALSE
+#% chance to Cast Supported Spells when you take a total of # Damage,TRUE,FALSE
++# to Level of Bow Gems in this item,TRUE,FALSE
++# maximum Frenzy Charge,TRUE,FALSE
+#% reduced Frenzy Charge Duration,TRUE,FALSE
+#% chance to Dodge Attacks per Frenzy Charge,TRUE,FALSE
+Area has increased monster variety,TRUE,FALSE
+Area has patches of burning ground,TRUE,FALSE
+Players are cursed with Elemental Weakness,TRUE,FALSE
+Monsters gain # Frenzy Charge every # seconds,TRUE,FALSE
+Monsters are Immune to Curses,TRUE,FALSE
+Unique Boss deals +#% Damage and attacks #% faster,TRUE,FALSE
+Adds #-# Cold Damage,FALSE,FALSE
+Adds #-# Cold Damage,TRUE,TRUE
+Your Flasks grant +#% to Chaos Resistance during flask effect,TRUE,FALSE
+Poisonous Hit,TRUE,FALSE
+Creates a mirrored copy of an item,TRUE,FALSE
+Can raise up to # Spectre at a time,TRUE,FALSE
+#% more Minion Movement Speed,TRUE,FALSE
+#% increased Energy Shield Cooldown Recovery,TRUE,FALSE
+Minion Movement Speed is Capped,TRUE,FALSE
+Minions have #% less Life,TRUE,FALSE
+Reflects #-# Lightning Damage to Melee Attackers,TRUE,FALSE
+Minions have #% less Energy Shield,TRUE,FALSE
+Chaos Damage does not bypass Energy Shield,TRUE,FALSE
+Minions deal #% less Damage,TRUE,FALSE
+You and nearby allies gain +#% to all Elemental Resistances,TRUE,FALSE
+Spend Life instead of Mana for Supported Skills,TRUE,FALSE
+# Mana Regenerated per second,TRUE,FALSE
+-#% to all Elemental Resistances,TRUE,FALSE
+-#% to all maximum Resistances,TRUE,FALSE
+"#% increased Armour while not Ignited, Frozen or Shocked",TRUE,FALSE
+Can raise up to # Zombies at a time,TRUE,FALSE
+You and nearby allies gain #% additional Lightning Resistance,TRUE,FALSE
+#% increased Experience gain,TRUE,FALSE
+#% increased Intelligence for each Unique Item you have equipped,TRUE,FALSE
+#% additional chance for slain monsters to drop Scrolls of Wisdom,TRUE,FALSE
+Additional # Seconds Base Duration per extra Corpse consumed,TRUE,FALSE
+Grants Minions +#% Chance to Block Attacks,TRUE,FALSE
+Grants Minions +#% Chance to Block Spells,TRUE,FALSE
+Cursed enemies lose #% Elemental Resistances,TRUE,FALSE
++# Life gained for each enemy hit by your Spells,TRUE,FALSE
+#% increased Spell Damage per #% Block Chance,TRUE,FALSE
+Can summon up to # Raging Spirits at a time,TRUE,FALSE
+Chill and Freeze duration on you is based on #% of Energy Shield,TRUE,FALSE
+#% of Physical Attack Damage Leeched as Mana per Power Charge,TRUE,FALSE
+Deals #-# base Lightning Damage per Power Charge,TRUE,FALSE
+Deals #-# base Fire Damage per Endurance Charge,TRUE,FALSE
+Deals #-# base Cold Damage per Frenzy Charge,TRUE,FALSE
+#% more Spell Damage for each stage,TRUE,FALSE
+#% chance to Freeze,TRUE,FALSE
+Enemies Frozen by you take #% increased Damage,TRUE,FALSE
+Cursed enemies lose #% Fire Resistance,TRUE,FALSE
+-# Chaos Damage taken,TRUE,FALSE
+Cursed enemies have +#% chance to be Ignited by Fire Damage,TRUE,FALSE
+Enemies Burn for #% of your maximum Life per second as Fire Damage,TRUE,FALSE
+Enemies Burn for #% of your maximum Energy Shield per second as Fire Damage,TRUE,FALSE
+You Burn for #% of your maximum Life per second as Fire Damage,TRUE,FALSE
+You Burn for #% of your maximum Energy Shield per second as Fire Damage,TRUE,FALSE
+#% more Spell Damage,TRUE,FALSE
+Adds #% more Damage for each stage,TRUE,FALSE
+Can summon up to # Skeletons at a time,TRUE,FALSE
+Minions deal #% less Elemental Damage,TRUE,FALSE
+Summons # Skeletons,TRUE,FALSE
+You and nearby allies regenerate # Mana per second,TRUE,FALSE
+Grants Minions #% increased Attack Speed,TRUE,FALSE
+Grants Minions #% increased Cast Speed,TRUE,FALSE
+Grants Minions #% increased Movement Speed,TRUE,FALSE
+#% chance to gain a Power Charge on Critical Strike,TRUE,FALSE
+Can use Items requiring up to level #,TRUE,FALSE
+Minions' Attacks deal #-# additional Physical Damage,TRUE,FALSE
+Hits up to # additional enemies near the target,TRUE,FALSE
+Always Freezes enemies,TRUE,FALSE
+Freezes enemies as though dealing #% more Damage,TRUE,FALSE
+Enemies lose #% Cold Resistance while Frozen,TRUE,FALSE
+#% more Area of Effect radius for each stage,TRUE,FALSE
+#% more Damage,TRUE,FALSE
+Kills Enemies on #% Life or less when hit by supported Skills,TRUE,FALSE
++#% to Fire and Cold Resistances,FALSE,FALSE
++#% to Fire and Lightning Resistances,FALSE,FALSE
+You and nearby allies gain #% additional Fire Resistance,TRUE,FALSE
+# Endurance Charges granted per one hundred nearby enemies,TRUE,FALSE
+Shields break after # total Damage is prevented,TRUE,FALSE
+# additional Armour,TRUE,FALSE
+Penetrates #% Fire Resistance,TRUE,FALSE
+Gems in this item are supported by level # Chance to Flee,TRUE,FALSE
+Hits can't be Evaded,TRUE,FALSE
+Your Critical Strikes do not deal increased Damage,TRUE,FALSE
+You gain Onslaught for # seconds on Critical Strike,TRUE,FALSE
+#% of Melee Physical Damage taken reflected to Attacker,TRUE,FALSE
+#% increased Critical Strike Chance,FALSE,FALSE
+#% increased Critical Strike Chance,TRUE,TRUE
+Gain an Endurance Charge if you Stun an Enemy with Melee Damage,TRUE,FALSE
+#% reduced Skill Effect Duration,TRUE,FALSE
+#% of Damage Leeched as Life,TRUE,FALSE
+#% increased Melee Physical Damage,TRUE,FALSE
+#% less Damage to main target,TRUE,FALSE
+#% less Damage to other targets,TRUE,FALSE
+Single-target Melee attacks deal Splash Damage to Surrounding Targets,TRUE,FALSE
++# to Maximum number of Skeletons,TRUE,FALSE
+#% increased Skeleton Duration,TRUE,FALSE
+#% increased Strength Requirement,TRUE,FALSE
+Adds #-# Fire Damage in Main Hand,TRUE,FALSE
+Adds #-# Cold Damage in Off Hand,TRUE,FALSE
+Enemies Chilled by you take #% increased Burning Damage,TRUE,FALSE
+#% Chance to Ignite when in Main Hand,TRUE,FALSE
+#% increased Chill Duration on enemies when in Off Hand,TRUE,FALSE
+Cannot be Stunned,TRUE,FALSE
+#% more Area Damage,TRUE,FALSE
+#% reduced Area of Effect radius,TRUE,FALSE
+#% increased Rarity of Items Dropped by Slain enemies,TRUE,FALSE
+You and nearby allies add #% of your Physical Damage as Cold Damage,TRUE,FALSE
+Deals #% of Base Physical Damage,TRUE,FALSE
+#% Increased Physical Damage per Frenzy Charge,TRUE,FALSE
+#% increased Physical Damage with Ranged Weapons,TRUE,FALSE
+Can't use other Rings,TRUE,FALSE
+#% reduced Effect of Curses on You,TRUE,FALSE
++# Mana gained for each enemy hit by your Attacks,TRUE,FALSE
+Area has patches of chilled ground,TRUE,FALSE
+Area contains many Totems,TRUE,FALSE
+Area is inhabited by Demons,TRUE,FALSE
+Players are cursed with Temporal Chains,TRUE,FALSE
+#% increased Monster Life,TRUE,FALSE
+#% more Rare Monsters,TRUE,FALSE
+Monsters deal #% extra Damage as Cold,TRUE,FALSE
+Area has patches of shocking ground,TRUE,FALSE
+Monsters gain # Power Charge every # seconds,TRUE,FALSE
+Monsters' skills Chain # additional times,TRUE,FALSE
+Monsters deal #% extra Damage as Lightning,TRUE,FALSE
+Area is #% larger,TRUE,FALSE
+Players are cursed with Warlord's Mark,TRUE,FALSE
+#% chance to Shock enemies,TRUE,FALSE
+Chains # Times,TRUE,FALSE
+You and nearby allies gain # additional Evasion Rating,TRUE,FALSE
+Each Viper Strike Charge deals # Base Chaos Damage per second,TRUE,FALSE
+# Mana drained per second,TRUE,FALSE
+Additional # Mana drained per second while moving,TRUE,FALSE
+-# Physical Damage taken when hit,TRUE,FALSE
+-# Fire Damage taken when hit,TRUE,FALSE
+Adds #-# Chaos Damage in Off Hand,TRUE,FALSE
+Counts as Dual Wielding,TRUE,FALSE
+#% increased Stun Duration on enemies at Maximum charge distance,TRUE,FALSE
+#% more Damage at Maximum Charge Distance,TRUE,FALSE
+Leeches # Life to you for each corpse consumed,TRUE,FALSE
+Leeches # Mana to you for each corpse consumed,TRUE,FALSE
+Minions deal #% more Physical Damage,TRUE,FALSE
++# Life gained when you Block,TRUE,FALSE
++# Mana gained when you Block,TRUE,FALSE
++#% to maximum Block Chance,TRUE,FALSE
+#% Chance to Block,TRUE,FALSE
+#% Chance to Block,TRUE,TRUE
+Reflects #-# Physical Damage to Attackers on Block,TRUE,FALSE
+#% increased Strength,TRUE,FALSE
+Enemies killed explode dealing #% of their Life as Fire Damage,TRUE,FALSE
+Chain +# Times,TRUE,FALSE
+#% increased Block Recovery,FALSE,FALSE
+Adds an additional Arrow,TRUE,FALSE
+Non-critical strikes deal #% Damage,TRUE,FALSE
+#% less Critical Strike Chance,TRUE,FALSE
+Your Critical Strikes have Culling Strike,TRUE,FALSE
+#% increased Quantity of Items Dropped by Slain enemies,TRUE,FALSE
++#% Monster pack size,TRUE,FALSE
+#% increased Monster Movement Speed,TRUE,FALSE
+#% increased Monster Attack Speed,TRUE,FALSE
+#% increased Monster Cast Speed,TRUE,FALSE
+Monsters reflect #% of Elemental Damage,TRUE,FALSE
+Monsters deal #% extra Damage as Fire,TRUE,FALSE
+Ignite on Cursed Enemies has #% increased Duration,TRUE,FALSE
+#% increased Mana Leech rate,TRUE,FALSE
++#% to maximum Fire Resistance,TRUE,FALSE
+#% increased Fire Resistance while on Low Life,TRUE,FALSE
+Cannot be Ignited while on Low Life,TRUE,FALSE
+#% increased Curse Duration,TRUE,FALSE
+#% increased Duration of Curses on you,TRUE,FALSE
+#% increased Minion Movement Speed,TRUE,FALSE
++# Extra Charges,TRUE,FALSE
+Grants #% of Life Recovery to Minions,TRUE,FALSE
+#% increased Life Recovered,TRUE,FALSE
+Removes #% of Life Recovered from Mana when used,TRUE,FALSE
+#% additional Elemental Resistances during flask effect,TRUE,FALSE
+#% of Physical Attack Damage Leeched as Life during flask effect,TRUE,FALSE
+#% increased Amount Recovered,TRUE,FALSE
+#% reduced Recovery Speed,TRUE,FALSE
+#% more Melee Physical Damage,TRUE,FALSE
+Removes Bleeding,TRUE,FALSE
+#% increased Evasion Rating during flask effect,TRUE,FALSE
+#% reduced Amount Recovered,TRUE,FALSE
+Instant Recovery when on Low Life,TRUE,FALSE
+Dispels Burning,TRUE,FALSE
+#% increased Armour during flask effect,TRUE,FALSE
+Recharges # Charge when you deal a Critical Strike,TRUE,FALSE
+Adds Knockback to Melee Attacks during flask effect,TRUE,FALSE
+#% increased Charge Recovery,TRUE,FALSE
+#% of Physical Attack Damage Leeched as Mana during flask effect,TRUE,FALSE
+#% increased Recovery when on Low Life,TRUE,FALSE
+#% chance to Avoid being Frozen,TRUE,FALSE
+Curse Enemies with Temporal Chains on Hit,TRUE,FALSE
+Gems in this item are Supported by level # Added Fire Damage,TRUE,FALSE
+Gems in this item are Supported by level # Cold to Fire,TRUE,FALSE
+Gems in this item are Supported by level # Fire Penetration,TRUE,FALSE
+#% of Block Chance applied to Spells when on Low Life,TRUE,FALSE
++#% to all maximum Resistances,TRUE,FALSE
+Cannot Block Attacks,TRUE,FALSE
+#% reduced Freeze Duration on You,TRUE,FALSE
+#% reduced Duration ,TRUE,FALSE
+Supported Melee Attack repeats # additional times,TRUE,FALSE
+#% more Melee Attack Speed,TRUE,FALSE
+#% less Attack Damage,TRUE,FALSE
+#% increased Area of Effect Radius per # Intelligence,TRUE,FALSE
+#% increased Attack Speed per # Dexterity,TRUE,FALSE
+#% increased Physical Weapon Damage per # Strength,TRUE,FALSE
+#% increased Trap Trigger Radius,TRUE,FALSE
+#% reduced Damage,TRUE,FALSE
+You and nearby allies gain #% increased Damage,TRUE,FALSE
+Gems in this item are Supported by level # Concentrated Effect,TRUE,FALSE
+#% reduced Energy Shield Cooldown Recovery,TRUE,FALSE
++#% Chaos Resistance when on Low Life,TRUE,FALSE
+"While on Low Life, Enemies are Unlucky when Damaging you",TRUE,FALSE
+#% increased Radius of Auras,TRUE,FALSE
+#% increased Radius of Curses,TRUE,FALSE
+#% increased Damage taken,TRUE,FALSE
+Nearby enemies have #% increased Effect of Curses on them,TRUE,FALSE
+Nearby allies gain #% increased Damage,TRUE,FALSE
+Minions deal #% increased Physical Damage,TRUE,FALSE
+#% increased Recovery Speed,TRUE,FALSE
+#% of Recovery applied Instantly,TRUE,FALSE
+#% increased Movement Speed during flask effect,TRUE,FALSE
+Recharges # Charges when you take a Critical Strike,TRUE,FALSE
+Dispels Shocked,TRUE,FALSE
++# Energy Shield gained on Kill,TRUE,FALSE
+#% increased Effect of Shrine Buffs on you,TRUE,FALSE
+#% increased Duration of Shrine Effects on you,TRUE,FALSE
+Life Leech from Hits with this Weapon applies instantly,TRUE,FALSE
+#% reduced number of Zombies allowed,TRUE,FALSE
++# to Zombie maximum Life,TRUE,FALSE
+#% increased Zombie Resistances,TRUE,FALSE
+#% increased Zombie Size,TRUE,FALSE
+Zombies deal #% increased Physical Damage,TRUE,FALSE
+Enemies killed by Zombies explode dealing Fire Damage,TRUE,FALSE
+#% reduced Physical Damage,TRUE,FALSE
+#% Chance to Dodge all enemy Attacks,TRUE,FALSE
+Mercury Footprints,TRUE,FALSE
+You lose all Endurance Charges when Hit,TRUE,FALSE
+You gain an Endurance Charge on Kill,TRUE,FALSE
+You gain Onslaught for # second per Endurance Charge when Hit,TRUE,FALSE
+You and nearby allies gain #% additional maximum Fire Resistance,TRUE,FALSE
+This Gem gains #% increased Experience,TRUE,FALSE
++# to Level of Supported Active Skill Gems,TRUE,FALSE
+#% increased Life Leech rate,TRUE,FALSE
+#% reduced Mana Cost,TRUE,FALSE
++#% to Quality of Supported Active Skill Gems,TRUE,FALSE
+#% reduced Strength Requirement,TRUE,FALSE
+Shock a nearby enemy for # seconds on Killing a Shocked enemy,TRUE,FALSE
+Ignite a nearby enemy on Killing an Ignited enemy,TRUE,FALSE
+#% increased Rarity of Items found during flask effect,TRUE,FALSE
+#% increased Quantity of Items found during flask effect,TRUE,FALSE
+#% increased Light Radius during flask effect,TRUE,FALSE
++#% to all maximum Elemental Resistances during flask effect,TRUE,FALSE
+#% increased Cast Speed when on Low Life,TRUE,FALSE
+#% increased Chaos Damage,TRUE,FALSE
+Has no Sockets,TRUE,FALSE
+-#% to Lightning Resistance,TRUE,FALSE
+#% of Physical Damage taken as Lightning Damage,TRUE,FALSE
+Area is inhabited by Skeletons,TRUE,FALSE
+#% increased Rarity of Items found in this Map,TRUE,FALSE
+Restless Dead,TRUE,FALSE
+Area is a large Maze,TRUE,FALSE
+Area contains a Large Chest,TRUE,FALSE
+Acrobatics,TRUE,FALSE
++# to Melee Weapon and Unarmed range,TRUE,FALSE
+#% increased Melee Damage when on Full Life,TRUE,FALSE
+Gems in this item are Supported by level # Added Lightning Damage,TRUE,FALSE
+Gems in this item are Supported by level # Melee Physical Damage,TRUE,FALSE
+Gems in this item are Supported by level # Faster Attacks,TRUE,FALSE
+#% chance to gain an Endurance Charge when you Block,TRUE,FALSE
+Can't use Chest armour,TRUE,FALSE
+You gain Onslaught for # seconds on Kill,TRUE,FALSE
+#% increased Effect of Supported Curses,TRUE,FALSE
+#% increased Mine Laying Speed,TRUE,FALSE
+#% increased Minion Maximum Life,TRUE,FALSE
+#% increased Accuracy Rating per Frenzy Charge,TRUE,FALSE
+#% reduced Frenzy Charge Duration per Frenzy Charge,TRUE,FALSE
+"When at maximum Frenzy Charges, Attacks Poison enemies",TRUE,FALSE
+Items and Gems have #% reduced Attribute Requirements,TRUE,FALSE
+#% increased Damage while Ignited,TRUE,FALSE
++# to Armour while Frozen,TRUE,FALSE
+Monsters are immune to randomly chosen elemental status ailments or stun,TRUE,FALSE
+Monsters' Melee Attacks apply random Curses on Hit,TRUE,FALSE
+Monsters reflect Curses,TRUE,FALSE
+Immunity to Curses during flask effect. Removes Curses on use,TRUE,FALSE
++# to Level of Spell Gems in this item,TRUE,FALSE
+Regenerate # Life over # second for each Spell you Cast,TRUE,FALSE
+Dispels Frozen and Chilled,TRUE,FALSE
+Gems in this item are Supported by level # Iron Will,TRUE,FALSE
+#% increased Damage per # Strength when in Main Hand,TRUE,FALSE
+#% increased Armour per # Strength when in Off Hand,TRUE,FALSE
+#% increased Damage over Time,TRUE,FALSE
+"On killing a Poisoned enemy, nearby enemies are Poisoned",TRUE,FALSE
+"On killing a Poisoned enemy, nearby allies Regenerate Life",TRUE,FALSE
+#% reduced Spell Damage,TRUE,FALSE
++# maximum Power Charge,TRUE,FALSE
+#% increased Spell Damage per Power Charge,TRUE,FALSE
+#% increased Intelligence Requirement,TRUE,FALSE
+Minions have #% increased Attack Speed,TRUE,FALSE
+Players take # Chaos Damage per second,TRUE,FALSE
+Monsters fire # additional Projectiles,TRUE,FALSE
+Removes #% of your maximum Energy Shield on use,TRUE,FALSE
+You take #% of your maximum Life as Chaos Damage on use,TRUE,FALSE
+You gain a Power Charge on use,TRUE,FALSE
+You gain a Frenzy Charge on use,TRUE,FALSE
+You gain an Endurance Charge on use,TRUE,FALSE
+#% increased Charges used,TRUE,FALSE
+#% additional Chance to Block while Dual Wielding Claws,TRUE,FALSE
+Monsters gain # Endurance Charges every # seconds,TRUE,FALSE
+Ghost Reaver,TRUE,FALSE
+Enchants a rare item with a new random property,TRUE,FALSE
+"#% Chance to Freeze, Shock and Ignite",TRUE,FALSE
+"#% increased Damage per Freeze, Shock and Ignite on enemy",TRUE,FALSE
+Replenishes Energy Shield by #% of Armour when you Block,TRUE,FALSE
+#% of Lightning Damage Converted to Chaos Damage,TRUE,FALSE
+Your Chaos Damage can Shock,TRUE,FALSE
+#% of Damage against Shocked enemies Leeched as Mana ,TRUE,FALSE
+#% of Damage against Frozen enemies Leeched as Life,TRUE,FALSE
+Minions have #% Chance to Block,TRUE,FALSE
+Minions have +# to Armour,TRUE,FALSE
+Minions Regenerate #% Life per Second,TRUE,FALSE
+You and nearby allies gain #% additional maximum Lightning Resistance,TRUE,FALSE
+Grants a passive skill refund point,TRUE,FALSE
+Improves the quality of a gem,TRUE,FALSE
+Creates Consecrated Ground on Critical Strike,TRUE,FALSE
+#% increased Rarity of Items Dropped by enemies killed with a Critical Strike,TRUE,FALSE
+Gain a Power Charge on non-Critical Strike,TRUE,FALSE
+Lose all Power Charges on Critical Strike,TRUE,FALSE
+#% increased Monster Damage,TRUE,FALSE
+Unique Boss drops # additional Rare Boots,TRUE,FALSE
+Unique Boss drops # additional Rare Two Handed Axes,TRUE,FALSE
+Unique Boss drops # additional Rare One Handed Axes,TRUE,FALSE
+Unique Boss drops # additional Rare Belts,TRUE,FALSE
+Curses in this item are reflected back to you,TRUE,FALSE
+You cannot be Chilled for # seconds after being Chilled,TRUE,FALSE
+You cannot be Frozen for # seconds after being Frozen,TRUE,FALSE
+You cannot be Ignited for # seconds after being Ignited,TRUE,FALSE
+You cannot be Shocked for # second after being Shocked,TRUE,FALSE
+You grant # Frenzy Charges to allies on Death,TRUE,FALSE
+Deals # Chaos Damage per second to nearby Enemies,TRUE,FALSE
+You take # Chaos Damage per second for # seconds on Kill,TRUE,FALSE
+-# to Accuracy Rating,TRUE,FALSE
+Your Skills have no Mana Cost during flask effect,TRUE,FALSE
+Your Spells have Culling Strike,TRUE,FALSE
+Supported Active Skill Gems gain #% increased Experience,TRUE,FALSE
+#% reduced Endurance Charge Duration,TRUE,FALSE
+#% reduced Power Charge Duration,TRUE,FALSE
+Gain an Endurance Charge when a Power Charge expires or is consumed,TRUE,FALSE
+Reserves #% of Life,TRUE,FALSE
+Cannot be used with Chaos Inoculation,TRUE,FALSE
+Improves the quality of an armour,TRUE,FALSE
+Improves the quality of a weapon,TRUE,FALSE
++# to Level of Elemental Gems in this item,TRUE,FALSE
++#% Monster Physical Resistance,TRUE,FALSE
+Players are cursed with Vulnerability,TRUE,FALSE
+Monsters reflect #% of Physical Damage,TRUE,FALSE
+Players are cursed with Enfeeble,TRUE,FALSE
+#% more Magic Monsters,TRUE,FALSE
+"Players Recover Life, Mana and Energy Shield #% slower",TRUE,FALSE
+-#% maximum Player Resistances,TRUE,FALSE
++#% Monster Lightning Resistance,TRUE,FALSE
+Area contains two Unique Bosses,TRUE,FALSE
+Monsters gain # Frenzy Charges every # seconds,TRUE,FALSE
+Right ring slot: You cannot Regenerate Mana,TRUE,FALSE
+Right ring slot: #% of Energy Shield Regenerated per second,TRUE,FALSE
+Left ring slot: #% increased Mana Regeneration Rate,TRUE,FALSE
+Left ring slot: You cannot Recharge or Regenerate Energy Shield,TRUE,FALSE
+You and nearby allies gain #% additional maximum Cold Resistance,TRUE,FALSE
+Area is inhabited by Animals,TRUE,FALSE
+Players have Elemental Equilibrium,TRUE,FALSE
+Monsters cannot be Stunned,TRUE,FALSE
+Area is a Maze,TRUE,FALSE
++#% Monster Fire Resistance,TRUE,FALSE
+Area is inhabited by Bandits,TRUE,FALSE
+Area is inhabited by Goatmen,TRUE,FALSE
++#% Monster Cold Resistance,TRUE,FALSE
+Area is inhabited by ranged monsters,TRUE,FALSE
+Area is inhabited by Sea Witches and their Spawn,TRUE,FALSE
+Area is inhabited by Humanoids,TRUE,FALSE
+Players have Blood Magic,TRUE,FALSE
+Players have no Life or Mana Regeneration,TRUE,FALSE
+Area is inhabited by Undead,TRUE,FALSE
+Unique Boss drops # additional Rare Sceptres,TRUE,FALSE
+Minions deal #% increased Physical Damage with Melee Attacks,TRUE,FALSE
+Upgrades a magic item to a rare item,TRUE,FALSE
+Unique Boss drops # additional Rare Daggers,TRUE,FALSE
+Unique Boss drops # additional Rare Two Handed Swords,TRUE,FALSE
+Reforges a rare item with new random properties,TRUE,FALSE
+Reforges the number of sockets on an item,TRUE,FALSE
+Improves the quality of a map,TRUE,FALSE
+Reforges the links between sockets on an item,TRUE,FALSE
+Reforges a magic item with new random properties,TRUE,FALSE
+Unique Boss drops # additional Rare Shields,TRUE,FALSE
+#% Chance to gain a Power Charge on Kill,TRUE,FALSE
+#% increased Projectile Speed per Frenzy Charge,TRUE,FALSE
+#% increased Projectile Damage per Power Charge,TRUE,FALSE
+Unique Boss drops # additional Rare One Handed Swords,TRUE,FALSE
+Unique Boss drops # additional Rare Staves,TRUE,FALSE
+Gems in this item have Blood Magic,TRUE,FALSE
+Gems in this item have #% reduced Mana Reservation,TRUE,FALSE
+#% increased Damage against Rare monsters,TRUE,FALSE
+"When you Kill a Rare monster, you gain its mods for # seconds",TRUE,FALSE
+No Life Recovery Applies during flask effect,TRUE,FALSE
+Recover Full Life at the end of the flask effect,TRUE,FALSE
+Unique Boss drops # additional Rare Two Handed Maces,TRUE,FALSE
+Creates an imprint of an item for later restoration,TRUE,FALSE
+Unique Boss drops # additional Rare One Handed Maces,TRUE,FALSE
+Unique Boss drops # additional Rare Body Armours,TRUE,FALSE
+Randomises the numeric values of the random properties on an item,TRUE,FALSE
+Removes all properties from an item,TRUE,FALSE
+Improves the quality of a flask,TRUE,FALSE
+Instant Recovery,TRUE,FALSE
+Monsters gain # Power Charges every # seconds,TRUE,FALSE
+Unique Boss drops # additional Rare Wands,TRUE,FALSE
+Final Boss drops higher Level Items,TRUE,FALSE
+Reforges the colour of sockets on an item,TRUE,FALSE
+#% increased Mana Recovered,TRUE,FALSE
+Removes #% of Mana Recovered from Life when used,TRUE,FALSE
+Unique Boss drops # additional Rare Quivers,TRUE,FALSE
+Unique Boss drops # additional Rare Helmets,TRUE,FALSE
+Unique Boss drops # additional Rare Claws,TRUE,FALSE

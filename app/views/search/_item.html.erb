@@ -1,0 +1,264 @@
+<div class="row item">
+<div class="col-xs-12 col-sm-4 col-md-2 item-graphics">
+  <% cache ['item-graphics', *item] do %>
+  <a href="<%= item.shop.thread %>" target="_blank"><img src="<%=item.icon%>" class="item-icon rarity-<%=item.rarity%>" /></a>
+  <div class="sockets w-<%=item.w%> h-<%=item.h%>">
+    <div style="position:relative; left:-50%; width:<%=47*item.w%>px;">
+    <%= render_sockets item if item.sockets %>
+    </div>
+  </div>
+  <hr class="separator" style="visibility:hidden" />
+  <%= link_to '<span class="fa fa-check-circle"></span> Verify'.html_safe, "/items/verify/#{item.id}", remote: true, class: "btn btn-primary verify-button" %>
+  <% end %><br/>
+  <h5>Last seen <%= time_ago_in_words item.updated_at %> ago</h5>
+  <% if item.buyout_amount > 0 or !item.buyout_currency.nil? %>
+   <% if params["order"] and params["order"] == "buyout_amount" 
+     mod_class = ' sorted-by'
+   else
+     mod_class = ''
+   end %>
+   <button type="button" class="sort attribute<%=mod_class%> btn btn-default" data-sort="buyout_amount"><span style="color:white; font-size:1.5em"><%= number_with_precision item.buyout_amount, precision: 1, strip_insignificant_zeros: true %> x <img src="<%= item.buyout_currency.icon_url if item.buyout_currency %>" width="32" /></span>
+   <% unless item.buyout_currency == @chaos %>
+     <small>(~<%= number_with_precision (item.buyout_amount / CurrencyRatio.where(league_id: item.league.id, currency_id: item.buyout_currency.id).first.chaos_ratio), precision: 1, strip_insignificant_zeros: true if item.buyout_currency %> x <img src="<%=@chaos.icon_url%>" width="16" />)</small>
+   <% end %>
+   <% end %>
+  </button>
+  </div>
+<% cache ['item-details', params["order"], *item] do %>
+<div class="col-xs-12 col-sm-8 col-md-4">
+  <%= render "item_detail", :item => item, layout: false %>
+</div>
+<div class="clearfix visible-sm"></div>
+<div class="col-xs-12 col-sm-6 col-md-4">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th colspan="2">Item Analysis</th>
+      </tr>  
+    </thead>
+    <tbody>
+      <% if item.total_resistance > 0 %>
+      <tr>
+        <th><i class="fa fa-shield"></i> Resistances</th>
+        <td>
+      <% if item.fire_resistance > 0 %>
+        <% if params["order"] and params["order"] == "fire_resistance" 
+          mod_class = ' sorted-by'
+        else
+          mod_class = ''
+        end %>
+        <button class="sort fire-text<%=mod_class%> btn btn-default" data-sort="fire_resistance"><i class="fa fa-shield fire-text"></i> <span class="fire-text"><%= item.fire_resistance %></span></button>
+      <% end %>
+      <% if item.cold_resistance > 0 %>
+        <% if params["order"] and params["order"] == "cold_resistance" 
+          mod_class = ' sorted-by'
+        else
+          mod_class = ''
+        end %>
+        <button class="sort cold-text<%=mod_class%> btn btn-default" data-sort="cold_resistance"><i class="fa fa-shield cold-text"></i> <span class="cold-text"><%= item.cold_resistance %></span></button>
+      <% end %>
+      <% if item.lightning_resistance > 0 %>
+        <% if params["order"] and params["order"] == "lightning_resistance" 
+          mod_class = ' sorted-by'
+        else
+          mod_class = ''
+        end %>
+        <button class="sort lightning-text<%=mod_class%> btn btn-default" data-sort="lightning_resistance"><i class="fa fa-shield lightning-text"></i> <span class="lightning-text"><%= item.lightning_resistance %></span></button>
+      <% end %>
+      <% if item.chaos_resistance > 0 %>
+        <% if params["order"] and params["order"] == "chaos_resistance" 
+          mod_class = ' sorted-by'
+        else
+          mod_class = ''
+        end %>
+        <button class="sort chaos-text<%=mod_class%> btn btn-default" data-sort="chaos_resistance"><i class="fa fa-shield chaos-text"></i> <span class="chaos-text"><%= item.chaos_resistance %></span></button>
+      <% end %>
+      <% if item.total_ele_resistance > 0 %>
+      <% if params["order"] and params["order"] == "total_ele_resistance" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <button class="sort<%=mod_class%> btn btn-default" data-sort="total_ele_resistance"><i class="fa fa-shield fire-text"></i><i class="fa fa-shield cold-text"></i><i class="fa fa-shield lightning-text"></i> <span><%= item.total_ele_resistance %></span></button>
+      <% end %>
+      <% if item.chaos_resistance > 0 %>
+      <% if params["order"] and params["order"] == "total_resistance" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <button class="sort<%=mod_class%> btn btn-default" data-sort="total_resistance"><i class="fa fa-shield fire-text"></i><i class="fa fa-shield cold-text"></i><i class="fa fa-shield lightning-text"></i><i class="fa fa-shield chaos-text"></i> <span><%= item.total_resistance %></span></button>
+      <% end %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <table class="table table-condensed">
+    <tbody>
+      <% if item.pdps > 0 %>
+      <% if params["order"] and params["order"] == "pdps" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <tr>
+        <th><span class="physical-dmg"><i class="fa fa-gavel"></i> Physical DPS:</span></th>
+        <td><a href="#" class="sort attribute<%=mod_class%>" data-sort="pdps"><span class="physical-dmg"><%=item.pdps%></span></a></td>
+      </tr>
+      <% end %>
+      <% if item.fire_dps > 0 %>
+      <% if params["order"] and params["order"] == "fire_dps" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <tr>
+        <th><span class="fire-dmg"><i class="fa fa-fire"></i> Fire DPS:</span></th>
+        <td><a href="#" class="sort fire-dmg<%=mod_class%>" data-sort="fire_dps"><span class="fire-dmg"><%=item.fire_dps%></span></a></td>
+      </tr>
+      <% end %>
+      <% if item.cold_dps > 0 %>
+      <% if params["order"] and params["order"] == "cold_dps" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <tr>
+        <th><span class="cold-dmg"><i class="fa fa-asterisk"></i> Cold DPS:</span></th>
+        <td><a href="#" class="sort cold-dmg<%=mod_class%>" data-sort="cold_dps"><span class="cold-dmg"><%=item.cold_dps%></span></a></td>
+      </tr>
+      <% end %>
+      <% if item.lightning_dps > 0 %>
+      <% if params["order"] and params["order"] == "lightning_dps" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <tr>
+        <th><span class="lightning-dmg"><i class="fa fa-bolt"></i> Lightning DPS:</span></th>
+        <td><a href="#" class="sort lightning-dmg<%=mod_class%>" data-sort="lightning_dps"><span class="lightning-dmg"><%=item.lightning_dps%></span></a></td>
+      </tr>
+      <% end %>
+      <% if item.edps > 0 %>
+      <% if params["order"] and params["order"] == "edps" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <tr>  
+        <th><i class="fa fa-bolt"></i> Total Elemental DPS:</th>
+        <td><a href="#" class="sort<%=mod_class%>" data-sort="edps"><span><%= item.edps %></span></a></td>
+      </tr>
+      <% end %>
+      <% if item.chaos_dps > 0 %>
+      <% if params["order"] and params["order"] == "chaos_dps" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <tr>
+        <th><span class="chaos-dmg"><i class="fa fa-flask"></i> Chaos DPS:</span></th>
+        <td><a href="#" class="sort chaos-dmg<%=mod_class%>" data-sort="chaos_dps"><span class="chaos-dmg"><%=item.chaos_dps%></span></a></td>
+      </tr>
+      <% end %>
+      <% if item.pdps+item.edps+item.chaos_dps > 0%>
+      <% if params["order"] and params["order"] == "dps" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <tr>
+        <th><i class="fa fa-gavel"></i> Total DPS:</th>
+        <td><a href="#" class="sort attribute<%=mod_class%>" data-sort="dps"><span><%= item.dps %></span></a></td>
+      </tr>
+      <% end %>
+      <% item.item_mods.each do |mod| next unless mod.mod.explicit; next unless mod.mod.total; next unless mod.mod.popular; next if @resistance_mods.include?(mod.mod.name) %>
+      <% if params["order"] and params["order"] == "exmod-#{mod.mod_id}" 
+        mod_class = ' sorted-by'
+      else
+        mod_class = ''
+      end %>
+      <tr>
+        <th><span class="mod"><%=mod.mod.name%></th>
+        <td style="width:40%">
+          <a href="#" class="sort<%=mod_class%>" data-sort="exmod-<%=mod.mod_id%>">
+          <span class="mod">
+            <% if mod.secondary_value > 0 %>
+              <%=mod.primary_value%> - <%=mod.secondary_value%>
+            <% else %>
+              <%= mod.total_value %>
+            <% end %>
+          </span>
+        </a>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<% end # cache item-details %>
+<div class="col-xs-12 col-sm-6 col-md-2">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th colspan="2">Seller</th>
+      </tr>  
+    </thead>
+    <tbody>
+  <tr>
+  <td>
+    <% unless item.seller.challenge_icon.blank? %>
+    <img src="http://www.pathofexile.com<%=item.seller.challenge_icon%>" width="20" />
+    <% end %><a href="<%=item.seller.account_url%>"><%= item.seller.account_name %></a><br/><br/>
+  IGN: <strong>
+  <% if item.seller.ign == '(!) Private' %>
+  <span class="private-text"><%=item.seller.ign%></span>
+  <% else %>
+  <%=item.seller.ign%></strong>
+  <% end %>
+  <br/><br/>
+  <% if item.seller.online? %>
+  <span class="label label-success">Online Now</span>
+  <% elsif !item.seller.last_seen_online.nil? and item.seller.last_seen_online > 1.week.ago %>
+  <span class="label label-warning">online <%= time_ago_in_words item.seller.last_seen_online %> ago</span>
+  <% elsif !item.seller.last_seen_online.nil? and item.seller.last_seen_online > 1.month.ago %>
+  <span class="label label-danger">online <%= time_ago_in_words item.seller.last_seen_online %> ago</span>
+  <% else %>
+  <span class="label label-default">Not Seen Yet</span>
+  <% end %>
+  <br/><br/>
+  <% if item.seller.ign != '(!) Private' and item.seller.online? %>
+  <button class="btn btn-success btn-sm contact-button" data-toggle="modal" data-target="#<%="item-#{item.id}-contact"%>"><i class="fa fa-user"></i> In-Game Chat</button>
+  <% end %>
+  <%= form_tag('http://www.pathofexile.com/private-messages/compose', target: '_blank', style: "margin:0; padding:0; display:inline") do %>
+  <%= hidden_field_tag "to_recipients[0][account_ids][1]", item.seller.account_id %>
+  <%= hidden_field_tag :subject, "WTB #{item.name}" %>
+  <%= hidden_field_tag :content, item.pm_content %>
+  <%= submit_tag("PM", class: 'btn btn-sm btn-primary') %>
+  <% end %>
+  <div class="modal fade" id="<%="item-#{item.id}-contact"%>" tabindex="-1" role="dialog" aria-labelledby="Contact In-Game" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Contact <%=item.seller.ign%> In-Game</h4>
+          </div>
+          <div class="modal-body">
+          <blockquote>
+            @<%=item.seller.ign%> Hi, I'm interested in buying your <%=item.name%> <%=item.item_type.name%> as listed in your shop via PoEMarkets
+          </blockquote>
+          <%= link_to '<span class="fa fa-check-circle"></span> Verify'.html_safe, "/items/verify/#{item.id}", remote: true, class: "btn btn-primary verify-button" %>
+          </div>
+          <div class="modal-footer">
+            <small><em>CTRL + C the above text and CTRL + V into the chat box in-game to send this seller a message</em></small>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>

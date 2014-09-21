@@ -1,0 +1,484 @@
+<div class="row">&nbsp;</div>
+<div class="row visible-sm hidden-md" style="padding-top:3em">&nbsp;</div>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-6"><strong>Tip:</strong> <%= @tip %></div>
+</div>
+<ul class="nav nav-pills">
+  <li><a id="switch-simple" href="#">Simple</a></li>
+  <li><a id="switch-advanced" href="#">Advanced</a></li>
+</ul>
+<div class="row">&nbsp;</div>
+<%= form_tag('/results', remote: true, method: 'get', role: "form", id: "search-form") do %>
+  <%= hidden_field_tag :page, @params["page"], id: 'set-page' %>
+  <%= hidden_field_tag :order, @params["order"], id: 'order' %>
+  <div class="row">
+    <div class="col-sm-3">
+      <%= label_tag(:league) %>
+      <% league_set = '' %>
+      <% if @params["league"] then league_set = ' league_set' end %>
+      <%= select_tag(:league, option_groups_from_collection_for_select(Region.all, :leagues, :name, :name, :name, @params["league"]), class: "form-control#{league_set}", id: "league-select") %>
+    </div>
+    <div class="col-sm-6">
+      <%= label_tag(:name, "Name") %>
+      <%= text_field_tag(:name, @params["name"], class: "form-control", id: 'item-name') %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-3">
+      <%= label_tag(:rarity, "Rarity") %>
+      <%= select_tag(:rarity, options_for_select([['Normal',0],['Magic',1],['Rare',2],['Unique',3]]), class: "form-control", prompt: "Any") %>
+    </div>
+  </div>
+  <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-3">
+      <%= label_tag(:item_type, "Item Type") %>
+      <%= select_tag(:item_type, grouped_options_for_select(ItemType.for_select, @params["item_type"]), prompt: "Any", class: "form-control")%>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+    <%= label_tag(:base, "Base Item") %>
+    <%= select_tag(:base, option_groups_from_collection_for_select(ItemType.all, :base_types, :name, :id, :name, @params["base"]), prompt: "Any", class: "form-control") %>
+    </div>
+    <div class="clearfix visible-xs">&nbsp;</div>
+    <div class="col-xs-12 col-sm-3 col-lg-2 advanced">
+      <%= label_tag(:quality, "Quality", class: 'sr-only') %>
+      <div class="input-group">
+      <span class="input-group-addon">Quality</span>
+      <%= text_field_tag(:quality_min, @params["quality_min"], class: "form-control", placeholder: "min") %>
+      <%= text_field_tag(:quality_max, @params["quality_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+  </div>
+  <div class="simple">
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:pdps_min, "Physical DPS") %>
+      <%= text_field_tag(:pdps_min, @params["pdps_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:dps_min, "Total DPS") %>
+      <%= text_field_tag(:dps_min, @params["dps_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:sockets_min, "Sockets") %>
+      <%= text_field_tag(:sockets_min, @params["sockets_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:links_min, "Links") %>
+      <%= text_field_tag(:links_min, @params["links_min"], class: "form-control", placeholder: "min") %>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:armour_min, "Armour") %>
+      <%= text_field_tag(:armour_min, @params["armour_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:evasion_min, "Evasion Rating") %>
+      <%= text_field_tag(:evasion_min, @params["evasion_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:shield_min, "Energy Shield") %>
+      <%= text_field_tag(:shield_min, @params["shield_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:required_level_max, "Required Level") %>
+      <%= text_field_tag(:required_level_max, @params["required_level_max"], class: "form-control", placeholder: "max") %>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+  </div>
+  <div class="advanced"><!-- start advanced -->
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:damage, "Damage per hit", class: 'sr-only') %>
+      <div class="input-group">
+      <span class="input-group-addon">Damage<br/>per hit</span>
+      <%= text_field_tag(:min_dmg, @params["min_dmg"], class: "form-control", placeholder: "min") %>
+      <%= text_field_tag(:max_dmg, @params["max_dmg"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2 col-sm-offset-1 col-lg-offset-0">
+      <%= label_tag(:attacks_per_second, "Attacks per second", class: 'sr-only') %>
+      <div class="input-group">
+        <span class="input-group-addon">Attacks<br/>per sec</span>
+        <%= text_field_tag(:aps_min, @params["aps_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:aps_max, @params["apx_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2 col-sm-offset-1 col-lg-offset-0">
+      <%= label_tag(:critical_strike_chance, "Critical %", class: 'sr-only') %>
+      <div class="input-group">
+        <span class="input-group-addon"><abbr title="Chance to cause a critical hit">Critical<br/>hit %</abbr></span>
+        <%= text_field_tag(:crit_min, @params["crit_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:crit_max, @params["crit_max"], class: "form-control", placeholder: "max") %> 
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:dps, "Total DPS", class: 'sr-only') %>
+      <div class="input-group">
+        <span class="input-group-addon">Total<br/><abbr title="Damage per second" class="initialism">DPS</abbr></span>
+        <%= text_field_tag(:dps_min, @params["dps_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:dps_max, @params["dps_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-sm-offset-1 col-lg-2 col-lg-offset-0">
+      <%= label_tag(:edps, "Elemental DPS", class: 'sr-only') %>
+      <div class="input-group">
+        <span class="input-group-addon">Elemental<br/><abbr title="Damage per second" class="initialism">DPS</abbr></span>
+        <%= text_field_tag(:edps_min, @params["edps_min"], class: "form-control", placeholder: "min") %> 
+        <%= text_field_tag(:edps_max, @params["edps_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-sm-offset-1 col-lg-2 col-lg-offset-0">
+      <%= label_tag(:pdps, "Physical DPS", class: 'sr-only') %>
+        <div class="input-group">
+          <span class="input-group-addon">Physical<br/><abbr title="Damage per second" class="initialism">DPS</abbr></span>
+          <%= text_field_tag(:pdps_min, @params["pdps_min"], class: "form-control", placeholder: "min") %>
+          <%= text_field_tag(:pdps_max, @params["pdps_max"], class: "form-control", placeholder: "max") %>
+        </div>
+      </div>
+    </div>
+  <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+  <div class="row">
+  <div class="col-xs-12 col-sm-3 col-lg-2">
+    <%= label_tag(:armour, "Armour", class: "sr-only") %>
+    <div class="input-group">
+      <span class="input-group-addon">Armour</span>
+      <%= text_field_tag(:armour_min, @params["armour_min"], class: "form-control", placeholder: "min") %>
+      <%= text_field_tag(:armour_max, @params["armour_max"], class: "form-control", placeholder: "max") %>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-3 col-lg-2 col-lg-offset-1">
+    <%= label_tag(:evasion_rating, "Evasion Rating", class: "sr-only") %>
+    <div class="input-group">
+      <span class="input-group-addon">Evasion<br/>Rating</span>
+      <%= text_field_tag(:evasion_min, @params["evasion_min"], class: "form-control", placeholder: "min") %>
+      <%= text_field_tag(:evasion_max, @params["evasion_max"], class: "form-control", placeholder: "max") %>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-3 col-lg-2 col-lg-offset-1">
+    <%= label_tag(:energy_shield, "Energy Shield", class: "sr-only") %>
+    <div class="input-group">
+      <span class="input-group-addon">Energy<br/>Shield</span>
+      <%= text_field_tag(:shield_min, @params["shield_min"], class: "form-control", placeholder: "min") %>
+      <%= text_field_tag(:shield_max, @params["shield_max"], class: "form-control", placeholder: "max") %>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-3 col-lg-2 col-lg-offset-1">
+    <%= label_tag(:block, "Block %", class: "sr-only") %>
+    <div class="input-group">
+      <span class="input-group-addon">Block %</span>
+      <%= text_field_tag(:block_min, @params["block_min"], class: "form-control", placeholder: "min") %>
+      <%= text_field_tag(:block_max, @params["block_max"], class: "form-control", placeholder: "max") %>
+    </div>
+  </div>
+  </div>
+  <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+      <%= label_tag(:sockets, "Sockets", class: "sr-only") %>
+      <div class="input-group">
+        <span class="input-group-addon">Sockets</span>
+        <%= text_field_tag(:sockets_min, @params["sockets_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:sockets_max, @params["sockets_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="form-inline">
+    <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4">
+      <%= label_tag(:socket_colours, "Minimum Socket Colours") %>
+      <div class="input-group">
+        <div class="col-sm-3 col-lg-3 no-padding">
+        <%= text_field_tag(:s_sockets, @params["s_sockets"], class: "form-control", placeholder: "red") %>
+        </div>
+        <div class="col-sm-3  col-lg-3 no-padding">
+        <%= text_field_tag(:d_sockets, @params["d_sockets"], class: "form-control", placeholder: "green") %>
+        </div>
+        <div class="col-sm-3 col-lg-3 no-padding">
+        <%= text_field_tag(:i_sockets, @params["i_sockets"], class: "form-control", placeholder: "blue") %>
+        </div>
+        <div class="col-sm-3 col-lg-3 no-padding">
+        <%= text_field_tag(:w_sockets, @params["w_sockets"], class: "form-control", placeholder: "white") %>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="clearfix visible-sm visible-xs">&nbsp;</div>
+      <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
+        <%= label_tag(:links, "Links", class: "sr-only") %>
+        <div class="input-group">
+          <span class="input-group-addon">Links</span>
+          <%= text_field_tag(:links_min, @params["links_min"], class: "form-control", placeholder: "min") %>
+          <%= text_field_tag(:links_max, @params["links_max"], class: "form-control", placeholder: "max") %>
+        </div>
+      </div>
+      <div class="form-inline">
+      <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4">
+        <%= label_tag(:socket_links, "Minimum Socket Links") %>
+      <div class="input-group">
+        <div class="col-sm-3 col-lg-3 no-padding">
+          <%= text_field_tag(:s_links, @params["s_links"], class: "form-control", placeholder: "red") %>
+        </div>
+        <div class="col-sm-3 col-lg-3 no-padding">
+          <%= text_field_tag(:d_links, @params["d_links"], class: "form-control", placeholder: "green") %>
+        </div>
+        <div class="col-sm-3 col-lg-3 no-padding">
+          <%= text_field_tag(:i_links, @params["i_links"], class: "form-control", placeholder: "blue") %>
+        </div>
+        <div class="col-sm-3 col-lg-3 no-padding">
+          <%= text_field_tag(:w_links, @params["w_links"], class: "form-control", placeholder: "white") %>
+        </div>
+      </div>
+      </div>
+      </div>
+  </div>
+  <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:required_level, "Required Level", class: "sr-only") %>
+      <div class="input-group">
+        <span class="input-group-addon">Required<br />Level</span>
+        <%= text_field_tag(:required_level_min, @params["required_level_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:required_level_max, @params["required_level_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2 col-lg-offset-1">
+      <%= label_tag(:required_str, "Required Strength", class: "sr-only") %>
+      <div class="input-group">
+        <span class="input-group-addon">Required<br/>Str</span>
+        <%= text_field_tag(:required_str_min, @params["required_str_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:required_str_max, @params["required_str_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2 col-lg-offset-1">
+      <%= label_tag(:required_dex, "Required Dexterity", class: "sr-only") %>
+      <div class="input-group">
+        <span class="input-group-addon">Required<br/>Dex</span>
+        <%= text_field_tag(:required_dex_min, @params["required_dex_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:required_dex_max, @params["required_dex_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2 col-lg-offset-1">
+      <%= label_tag(:required_level, "Required Intelligence", class: "sr-only") %>
+      <div class="input-group">
+        <span class="input-group-addon">Required<br/>Int</span>
+        <%= text_field_tag(:required_int_min, @params["required_int_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:required_int_max, @params["required_int_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+  </div><!-- end advanced -->
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:fire_resistance_min, '<i class="fa fa-shield"></i> Fire Resistance'.html_safe, class: "fire-text") %>
+      <%= text_field_tag(:fire_resistance_min, @params["fire_resistance_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:cold_resistance_min, '<i class="fa fa-shield"></i> Cold Resistance'.html_safe, class: "cold-text") %>
+      <%= text_field_tag(:cold_resistance_min, @params["cold_resistance_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:lightning_resistance_min, '<i class="fa fa-shield"></i> Lightning Resistance'.html_safe, class: "lightning-text", style: "font-size:1.1em") %>
+      <%= text_field_tag(:lightning_resistance_min, @params["lightning_resistance_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:chaos_resistance_min, '<i class="fa fa-shield"></i> Chaos Resistance'.html_safe, class: "chaos-text") %>
+      <%= text_field_tag(:chaos_resistance_min, @params["chaos_resistance_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 advanced">
+      <%= label_tag(:num_ele_resistances_min, '<span class="fire-text"><i class="fa fa-shield"></i></span><span class="cold-text"><i class="fa fa-shield"></i></span><span class="lightning-text"><i class="fa fa-shield"></i></span> Count Elemental Resistances'.html_safe) %>
+      <%= text_field_tag(:num_ele_resistances_min, @params["num_ele_resistances_min"], class: "form-control", placeholder: "1-3 (min)") %>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-lg-4">
+      <%= label_tag(:total_ele_resistance_min, '<span class="fire-text"><i class="fa fa-shield"></i></span>+<span class="cold-text"><i class="fa fa-shield"></i></span>+<span class="lightning-text"><i class="fa fa-shield"></i></span> Total Elemental Resistance'.html_safe) %>
+      <%= text_field_tag(:total_ele_resistance_min, @params["total_ele_resistance_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4">
+      <%= label_tag(:total_resistance_min, '<span class="fire-text"><i class="fa fa-shield"></i></span>+<span class="cold-text"><i class="fa fa-shield"></i></span>+<span class="lightning-text"><i class="fa fa-shield"></i></span>+<span class="chaos-text"><i class="fa fa-shield"></i></span> Total Resistance'.html_safe) %>
+      <%= text_field_tag(:total_resistance_min, @params["total_resistance_min"], class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-lg-4 advanced">
+      <%= label_tag(:num_resistances_min, '<span class="fire-text"><i class="fa fa-shield"></i></span><span class="cold-text"><i class="fa fa-shield"></i></span><span class="lightning-text"><i class="fa fa-shield"></i></span><span class="chaos-text"><i class="fa fa-shield"></i></span> Count Resistances'.html_safe) %>
+      <%= text_field_tag(:num_resistances_min, @params["num_resistances_min"], class: "form-control", placeholder: "1-4 (min)") %>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+  <div class="row form-inline">
+    <div class="col-xs-12">
+      <%= label_tag(:implicit_mod, "Implicit Mod") %>
+      <div class="input-group" style="width:100%">
+        <div class="col-xs-12 col-sm-9">
+          <%= select_tag(:implicit_mod, Mod.option_tags(false, @params["implicit_mod"]), class: "form-control", prompt: "Select") %>
+        </div>
+        <div class="col-xs-offset-1 col-sm-offset-0 col-xs-5 col-sm-1 no-padding">
+          <%= text_field_tag(:implicit_primary_value_min, @params["implicit_primary_value_min"], class: "form-control", placeholder: "min") %>
+        </div>
+        <div class="col-xs-5 col-sm-1 no-padding">
+          <%= text_field_tag(:implicit_primary_value_max, @params["implicit_primary_value_max"], class: "form-control", placeholder: "max") %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+  <%= label_tag(:explicit_mods, "Explicit Mods") %>
+  <div id="mod_selector">
+    <div class="row form-inline">
+      <div class="col-sm-12">
+        <div class="input-group" style="width:100%">
+          <div class="col-xs-12 col-sm-9">
+          <% if @params["explicit_mods"] and @params["explicit_mods"]["0"] then selected = @params["explicit_mods"]["0"].to_i else selected = false end %>
+          <%= select_tag("explicit_mods[0]", Mod.option_tags(true, selected), class: "form-control", prompt: "Select") %>
+          </div>
+          <div class="col-xs-5 col-sm-1 no-padding">
+          <% if @params["primary_value_min"] then default = @params["primary_value_min"]["0"]  else default = '' end %>
+          <%= text_field_tag("primary_value_min[0]", default, class: "form-control", placeholder: "min") %>
+          </div>
+          <div class="col-xs-5 col-sm-1 no-padding">
+          <% if @params["primary_value_max"] then default = @params["primary_value_max"]["0"]  else default = '' end %>
+          <%= text_field_tag("primary_value_max[0]", default, class: "form-control", placeholder: "max") %>
+          </div>
+          <div class="col-xs-2 col-sm-1">
+            <%= button_tag("<span class='fa fa-trash-o'></span>".html_safe, class: "remove_mod_button btn btn-danger", type: :button) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% if @params["explicit_mods"] and @params["explicit_mods"].count > 0 %>
+    <% @params["explicit_mods"].each_with_index do |mod, index| %>
+    <% next if index == 0 %>
+    <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+    <div class="row form-inline">
+      <div class="col-sm-12">
+        <div class="input-group" style="width:100%">
+          <div class="col-xs-12 col-sm-9">
+          <%= select_tag("explicit_mods[#{index}]", Mod.option_tags(true, @params["explicit_mods"]["#{index}"].to_i), class: "form-control", prompt: "Select") %>
+          </div>
+          <div class="col-xs-5 col-sm-1 no-padding">
+          <%= text_field_tag("primary_value_min[#{index}]", @params["primary_value_min"]["#{index}"], class: "form-control", placeholder: "min") %>
+          </div>
+          <div class="col-xs-5 col-sm-1 no-padding">
+          <%= text_field_tag("primary_value_max[#{index}]", @params["primary_value_max"]["#{index}"], class: "form-control", placeholder: "max") %>
+          </div>
+          <div class="col-xs-2 col-sm-1">
+            <%= button_tag("<span class='fa fa-trash-o'></span>".html_safe, class: "remove_mod_button btn btn-danger", type: :button) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+  <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-8 col-md-2 col-md-offset-9 col-lg-2 col-lg-offset-9 no-padding">
+      <%= button_tag("<i class='fa fa-plus-square'></i>&nbsp;&nbsp;Add Modifier".html_safe, id: :add_mod_button, type: :button, class: "btn btn-primary btn-block") %>
+    </div>
+  </div>
+  <div class="row advanced">
+    <div class="col-xs-12 col-sm-4 col-lg-2">
+      <%= label_tag(:item_quantity, "+% Item Quantity", class: "sr-only") %>
+      <div class="input-group">
+        <span class="input-group-addon">+% Item<br/>Quantity<br/>(Maps)</span>
+        <%= text_field_tag(:item_quantity_min, @params["item_quantity_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:item_quantity_max, @params["item_quantity_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-lg-2">
+      <%= label_tag(:item_level, "Gem/Map Level", class: "sr-only") %>
+      <div class="input-group">
+        <span class="input-group-addon">Gem/Map<br/>Level</span>
+        <%= text_field_tag(:item_level_min, @params["item_level_min"], class: "form-control", placeholder: "min") %>
+        <%= text_field_tag(:item_level_max, @params["item_level_max"], class: "form-control", placeholder: "max") %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-lg-2">
+      <%= label_tag(:seller_name, "Account Name") %>
+      <%= text_field_tag(:seller_name, @params["seller_name"], class: "form-control") %>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-lg-2">
+      <%= label_tag(:thread_no, "Shop Thread #") %>
+      <%= text_field_tag(:thread_no, @params["thread_no"], class: "form-control") %>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:online_only, check_box_tag(:online_only, 'yes', @params["online_only"] == 'yes') + "Online Only", class: "checkbox-inline") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:alternative_art, check_box_tag(:alternative_art, 'yes', @params["alternative_art"] == 'yes') + 'Alternative Art', class: "checkbox-inline") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-2">
+      <%= label_tag(:corrupted, check_box_tag(:corrupted, 'yes', @params["corrupted"] == 'yes') + 'Corrupted', class: "checkbox-inline") %>
+    </div>
+    <div class="col-xs-12 col-sm-3 col-lg-3">
+      <%= label_tag(:unidentified, check_box_tag(:unidentified, 'yes', @params["unidentified"] == 'yes') + 'Unidentified', class: "checkbox-inline") %>
+    </div>
+  </div>
+  <div class="row">&nbsp;</div>
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+      <% is_checked = false
+         is_checked = true if @params["only_with_buyout"] == 'yes' %>
+      <%= label_tag(:only_with_buyout, check_box_tag(:only_with_buyout, 'yes', is_checked) + "With Buyout Only", class: "checkbox-inline") %>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+      <div class="input-group">
+        <%= text_field_tag(:buyout_amount, @params["buyout_amount"], class: "form-control", placeholder: "Max Buyout") %>
+        <div class="input-group-btn" id="buyout-currency">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><img src="<%= @chaos.icon_url %>" width="18" /> <%=@chaos.name%> <span class="caret"></span></button>
+          <ul class="dropdown-menu pull-right">
+          <% Currency.all.each do |c| %>
+            <li data-value="<%=c.id%>"><a href="#"><img src="<%= c.icon_url %>" width="18" style="display:inline"/> <%=c.name%></a></li>
+          <% end %>
+          </ul>
+          <%= hidden_field_tag(:buyout_currency, @params["buyout_currency"] || @chaos.id, id: :buyout_currency_hidden)%>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix visible-xs visible-sm">&nbsp;</div>
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+      <% buyout_rates = 'Include buyouts converted from other currencies?<br/>(using approximate exchange rates)' %>
+      <% is_checked = true
+         is_checked = false unless @params["normalize_buyouts"] == 'yes' %>
+      <%= label_tag(:normalize_buyouts, check_box_tag(:normalize_buyouts, 'yes', is_checked) + buyout_rates.html_safe, class: "checkbox-inline") %>
+    </div>
+  </div>
+  <div class="row"><div class="col-sm-12">&nbsp;</div></div>
+  <div class="row">
+    <div class="col-sm-1">
+      <%= link_to '<i class="fa fa-refresh"></i>&nbsp;&nbsp;New Search'.html_safe, '/search', class: 'btn btn-primary', data: { no_turbolink: true } %>
+    </div>
+    <div class="clearfix visible-xs">&nbsp;</div>
+    <div class="col-sm-4 col-sm-offset-6">
+      <%= button_tag("<i class='fa fa-search'></i> Search".html_safe, type: :submit, class: "btn btn-lg btn-block btn-success", name: '', id: "submit-button") %>
+    </div>
+  </div>
+<% end %>
+<div id="mod_template">
+<div class="row"><div class="col-sm-12">&nbsp;</div></div>
+<div class="row form-inline">
+  <div class="col-sm-12">
+  <div class="input-group" style="width:100%">
+    <div class="col-xs-12 col-sm-9">
+      <%= select_tag("explicit_mods[_INDEX_]", Mod.option_tags(true), class: "form-control", prompt: "Select") %>
+    </div>
+    <div class="col-xs-5 col-sm-1 no-padding">
+      <%= text_field_tag("primary_value_min[_INDEX_]", '', class: "form-control", placeholder: "min") %>
+    </div>
+    <div class="col-xs-5 col-sm-1 no-padding">
+      <%= text_field_tag("primary_value_max[_INDEX_]", '', class: "form-control", placeholder: "max") %>
+    </div>
+    <div class="col-xs-2 col-sm-1">
+      <%= button_tag("<span class='fa fa-trash-o'></span>".html_safe, class: "remove_mod_button btn btn-danger", type: :button) %>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+<div id="results"></div>

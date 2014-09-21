@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  implicit_mod_id: 1
+  primary_value: 1
+  secondary_value: 1
+
+two:
+  implicit_mod_id: 1
+  primary_value: 1
+  secondary_value: 1

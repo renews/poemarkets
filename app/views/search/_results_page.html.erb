@@ -1,0 +1,9 @@
+<% if @items.length > 0 %>
+<%= render :partial => 'item', :collection => @items %>
+<div class="load-more-nav">
+<a href="#" class="load-more btn btn-block btn-default" data-page="<%=params['page'].to_i+1%>">Load More Items</a>
+</div>
+<% else %>
+<div class="row"><div class="col-sm-12">&nbsp;</div>
+<div class="row"><div class="col-sm-12"><div id="no-more-items" class="alert alert-warning">No more items to display</div></div></div>
+<% end %>

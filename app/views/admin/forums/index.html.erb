@@ -1,0 +1,23 @@
+<%= link_to "Add New Forum", new_admin_forum_path %>
+<table class="table">
+<thead>
+  <tr>
+    <th>Region</th>
+    <th>League</th>
+    <th>Forum</th>
+    <th>Edit<th>
+    <th>Delete</th>
+  </tr>
+</thead>
+<tbody>
+  <% @forums.each do |forum| %>
+  <tr>
+    <td><%= forum.league.region.name %></td>
+    <td><%= forum.league.name %></td>
+    <td><%= forum.url %></td>
+    <td>E</td>
+    <td><%= link_to "Delete", admin_forum_path(forum), method: :delete %></td>
+  </tr>
+  <% end %>
+</tbody>
+</table>

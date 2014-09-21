@@ -1,0 +1,30 @@
+<%# navigation styled for Bootstrap 3.0 %>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to '<strong>PoE Markets</strong>'.html_safe, root_path, class: 'navbar-brand', data: { no_turbolink: true } %>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <%= render 'layouts/navigation_links' %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" style="color:lightgreen">Items In Index: ~<%=number_to_human @item_count.values[0][0]%></a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:gold">
+            <span class="fa fa-heart"></span> Our Partners <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+          <li><a href="http://pathofpoe.com"><span style="color:#366492"><span class="fa fa-magic"></span> Builds | Path of PoE</span></a></li>
+          <li><a href="http://www.rnghell.com" style="color:gold"><span class="fa fa-thumbs-up"></span> Memes | RNGHell.com</a></li>
+          </ul>
+      </ul>
+    </div>
+  </div>
+</nav>

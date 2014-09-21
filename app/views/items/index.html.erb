@@ -1,0 +1,13 @@
+<% @items.each do |item| %>
+<br />
+<%=item.name %> - <%=item.shop.thread%>
+<img src="<%=item.icon_url%>" /><br />
+<% item.item_implicit_mods.each do |mod| %>
+<%= mod.valued_mod %>
+<% end %>
+<hr />
+<% item.item_explicit_mods.each do |mod| %>
+<%= mod.valued_mod %><br />
+<% end %>
+<br />
+<% end %>

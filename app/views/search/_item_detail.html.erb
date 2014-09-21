@@ -1,0 +1,244 @@
+<div class="item-box">
+  <div class="item-header rarity-<%=item.rarity%>">
+    <% item_name = item.name
+       item_name += "<br/>"+item.base_type.name if item.base_type and !item.name.downcase.include?(item.base_type.name.downcase) %>
+    <% if item_name.length > 30 and (item.rarity.to_i < 2 or item.rarity.to_i > 3) %>
+    <span style="font-size:80%"><%=item_name.html_safe %></span>
+    <% else %>
+    <%= item_name.html_safe %>
+    <% end %>
+    <br />
+  </div>
+  <% if item.item_type.name.include? 'Gem' %>
+  <% if params["order"] and params["order"] == "gem_level" 
+    mod_class = ' sorted-by'
+  else
+    mod_class = ''
+  end %>
+    <span class="attribute-label">Level:</span> <a href="#" class="sort attribute<%=mod_class%>" data-sort="gem_level"><span class="attribute-value"><%=item.item_level%></span></a><br />
+  <% end %>
+  <% if item.item_type.name == 'Map' %>
+  <% if params["order"] and params["order"] == "map_level" 
+    mod_class = ' sorted-by'
+  else
+    mod_class = ''
+  end %>
+    <span class="attribute-label">Map Level:</span> <a href="#" class="sort attribute<%=mod_class%>" data-sort="map_level"><span class="attribute-value"><%=item.item_level%></span></a><br />
+    <% if params["order"] and params["order"] == "item_quantity" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <span class="attribute-label">Item Quantity:</span> <a href="#" class="sort attribute<%=mod_class%>" data-sort="item_quantity"><span class="attribute-value">+<%=item.item_quantity%>%</span></a><br />
+  <% end %>
+  <% if item.physical_dmg_min > 0 %>
+    <span class="attribute-label">Physical Damage:</span> 
+    <% if params["order"] and params["order"] == "physical_dmg_min" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <a href="#" class="sort attribute<%=mod_class%>" data-sort="physical_dmg_min">
+      <span class="attribute-value"><%= item.physical_dmg_min %></span>
+    </a> - 
+    <% if params["order"] and params["order"] == "physical_dmg_max" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <a href="#" class="sort attribute<%=mod_class%>" data-sort="physical_dmg_max">
+      <span class="attribute-value"><%= item.physical_dmg_max %></span>
+    </a><br />
+  <% end %>
+  <% if (item.fire_dmg_min+item.cold_dmg_min+item.lightning_dmg_min) > 0 %>
+    <span class="attribute-label">Elemental Damage:</span> 
+    <% if item.fire_dmg_min > 0 %>
+    <% if params["order"] and params["order"] == "fire_dmg_min" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <a href="#" class="sort <%=mod_class%>" data-sort="fire_dmg_min">
+      <span class="fire-dmg"><%= item.fire_dmg_min %></span>
+    </a> 
+    <% if params["order"] and params["order"] == "fire_dmg_max" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <span class="fire-dmg"> - </span>
+    <a href="#" class="sort <%=mod_class%>" data-sort="fire_dmg_max">
+      <span class="fire-dmg"><%= item.fire_dmg_max %></span>
+    </a>&nbsp;
+    <% end %>
+    <% if item.cold_dmg_min > 0 %>
+    <% if params["order"] and params["order"] == "cold_dmg_min" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <a href="#" class="sort <%=mod_class%>" data-sort="cold_dmg_min">
+      <span class="cold-dmg"><%= item.cold_dmg_min %></span>
+    </a>
+    <% if params["order"] and params["order"] == "cold_dmg_max" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <span class="cold-dmg"> - </span>
+    <a href="#" class="sort <%=mod_class%>" data-sort="cold_dmg_max">
+      <span class="cold-dmg"><%= item.cold_dmg_max %></span>
+    </a>&nbsp;
+    <% end %>
+    <% if item.lightning_dmg_min > 0 %>
+    <% if params["order"] and params["order"] == "lightning_dmg_min" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <a href="#" class="sort <%=mod_class%>" data-sort="lightning_dmg_min">
+      <span class="lightning-dmg"><%= item.lightning_dmg_min %></span>
+    </a>
+    <% if params["order"] and params["order"] == "lightning_dmg_max" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <span class="lightning-dmg"> - </span>
+    <a href="#" class="sort <%=mod_class%>" data-sort="lightning_dmg_max">
+      <span class="lightning-dmg"><%= item.lightning_dmg_max %></span>
+    </a>
+    <% end %><br />
+  <% end %>
+  <% if item.chaos_dmg_min > 0 %>
+  <% if params["order"] and params["order"] == "chaos_dmg_min" 
+    mod_class = ' sorted-by'
+  else
+    mod_class = ''
+  end %>
+  <span class="attribute-label">Chaos Damage:</span> 
+  <a href="#" class="sort <%=mod_class%>" data-sort="chaos_dmg_min">
+    <span class="chaos-dmg"><%= item.chaos_dmg_min %></span>
+  </a>
+  <% if params["order"] and params["order"] == "chaos_dmg_max" 
+    mod_class = ' sorted-by'
+  else
+    mod_class = ''
+  end %>
+  <span class="chaos-dmg"> - </span>
+  <a href="#" class="sort <%=mod_class%>" data-sort="chaos_dmg_max">
+    <span class="chaos-dmg"><%= item.chaos_dmg_max %></span>
+  </a><br />
+  <% end %>
+  <% if item.attacks_per_second and item.attacks_per_second > 0 %>
+  <% if params["order"] and params["order"] == "attacks_per_second" 
+    mod_class = ' sorted-by'
+  else
+    mod_class = ''
+  end %>
+    <span class="attribute-label">Attacks per Second:</span> 
+    <a href="#" class="sort attribute<%=mod_class%>" data-sort="attacks_per_second">
+      <span class="attribute-value"><%= item.attacks_per_second %></span>
+    </a><br />
+  <% end %>
+  <% if item.critical_strike_chance and item.critical_strike_chance > 0 %>
+    <span class="attribute-label">Critical Strike Chance:</span> 
+    <% if params["order"] and params["order"] == "critical_strike_chance" 
+      mod_class = ' sorted-by'
+    else
+      mod_class = ''
+    end %>
+    <a href="#" class="sort attribute<%=mod_class%>" data-sort="critical_strike_chance">
+      <span class="attribute-value"><%= item.critical_strike_chance %>%</span>
+    </a><br />
+  <% end %>
+  <% if item.armour and item.armour > 0 %>
+  <% if params["order"] and params["order"] == "armour" 
+    mod_class = ' sorted-by'
+  else
+    mod_class = ''
+  end %>
+    <span class="attribute-label">Armour:</span> 
+    <a href="#" class="sort attribute<%=mod_class%>" data-sort="armour">
+      <span class="attribute-value"><%= item.armour %></span>
+    </a><br />
+  <% end %>
+  <% if item.evasion_rating and item.evasion_rating > 0 %>
+  <% if params["order"] and params["order"] == "evasion_rating" 
+    mod_class = ' sorted-by'
+  else
+    mod_class = ''
+  end %>
+    <span class="attribute-label">Evasion Rating:</span> 
+    <a href="#" class="sort attribute<%=mod_class%>" data-sort="evasion_rating">
+      <span class="attribute-value"><%= item.evasion_rating %></span>
+    </a><br />
+  <% end %>
+  <% if item.energy_shield and item.energy_shield > 0 %>
+  <% if params["order"] and params["order"] == "energy_shield" 
+    mod_class = ' sorted-by'
+  else
+    mod_class = ''
+  end %>
+    <span class="attribute-label">Energy Shield:</span> 
+    <a href="#" class="sort attribute<%=mod_class%>" data-sort="energy_shield">
+      <span class="attribute-value"><%= item.energy_shield %></span>
+    </a><br />
+  <% end %>
+  <% if item.quality and item.quality > 0 %>
+  <% if params["order"] and params["order"] == "quality" 
+    mod_class = ' sorted-by'
+  else
+    mod_class = ''
+  end %>
+  <span class="attribute-label">Quality:</span> <a href="#" class="sort <%=mod_class%>" data-sort="quality"><span><%= "+#{item.quality}%" %></span></a><br />
+  <% end %>
+<hr class="separator rarity-<%=item.rarity%>" />
+  <% if (item.required_level+item.required_str+item.required_dex+item.required_int) > 0 %>
+    <span class="attribute-label">Requires 
+    <% if item.required_level > 0 %>
+    Level <span class="attribute-value"><%=item.required_level%></span>&nbsp;
+    <% end %>
+    <% if item.required_str > 0 %>
+    <span class="attribute-value"><%=item.required_str%></span> Str&nbsp;
+    <% end %>
+    <% if item.required_dex > 0 %>
+    <span class="attribute-value"><%=item.required_dex%></span> Dex&nbsp;
+    <% end %>
+    <% if item.required_int > 0 %>
+    <span class="attribute-value"><%=item.required_int%></span> Int&nbsp;
+    <% end %>
+    </span><br />
+    <hr class="separator rarity-<%=item.rarity%>" />
+  <% end %> 
+<% imp = false %>
+<% item.item_mods.each do |mod| next if mod.mod.explicit %>
+<% imp = true %>
+<% if params["order"] and params["order"] == "impmod-#{mod.mod_id}" 
+  mod_class = ' sorted-by'
+else
+  mod_class = ''
+end %>
+<a href="#" class="sort<%=mod_class%>" data-sort="impmod-<%=mod.mod_id%>"><span class="mod"><%= mod.valued_mod %></span></a><br />
+<% end %>
+<% if imp %>
+<hr class="separator rarity-<%=item.rarity%>" />
+<% end %>
+<% unless item.identified %>
+<span class="attribute-label">Identified:</span> <span class="unidentified"><%=item.identified%></span><br />
+<% end %>
+<% item.item_mods.each do |mod| next unless mod.mod.explicit; next if mod.mod.total %>
+<% if params["order"] and params["order"] == "exmod-#{mod.mod_id}" 
+  mod_class = ' sorted-by'
+else
+  mod_class = ''
+end %>
+<% mod_class += ' crafted' if mod.crafted %>
+<a href="#" class="sort<%=mod_class%>" data-sort="exmod-<%=mod.mod_id%>"><span class="mod"><%= mod.valued_mod %></span></a>
+<br />
+<% end %>
+<% if item.corrupted %>
+<hr class="separator rarity-<%=item.rarity%>" />
+<span class="corrupted-text">Corrupted</span>
+<% end %>
+</div>

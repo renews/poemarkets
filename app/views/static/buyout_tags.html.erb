@@ -1,0 +1,61 @@
+<h2>How to add Buyout Tags to your shop</h2>
+<div class="alert alert-warning">
+  <p>I highly recommend the utility <a href="http://www.pathofexile.com/forum/view-thread/172710">Procurement</a> to automate much of this functionality.</p>
+</div>
+<p>PoEMarkets can detect buyout tags in the following syntax.</p>
+<h3>Tag Types</h3>
+<h4>Global Shop Tag</h4>
+<p>If you add <span class="label label-default">~gb/o</span> anywhere in your shop, this will become the default buyout for any items that do not have a buyout set.</p>
+<h4>Spoiler Tag Buyout</h4>
+<p>To group items by a similar buyout, simply place the items within a spoiler tag and in the spoiler title use <span class="label label-default">~b/o</span>
+<h4>Specific Item Buyout</h4>
+<p>To set a buyout for a specific item, write the buyout tag <span class="label label-default">~b/o</span> immediately after the item.</p>
+<h3>Tag Format</h3>
+<p>Tags should be in the format <span class="label label-default">~b/o amount currency</span>. Decimal amounts are allowed.</p>
+<p>The following currency tags are currently supported:</p>
+<ul>
+  <% Currency.all.each do |c| %>
+  <li><%=c.name%> - 
+    <% c.alternate_names.split.each do |t| %>
+    <span class="label label-default"><%=t%></span>
+    <% end %>
+  </li>
+  <% end %>
+</ul>
+<p>* Items with a buyout of <span class="label label-default">mirror</span> will always display as verified. This is so you can offer a mirror service of an item without having to worry about moving it around in your stash or wearing the item.</p>
+<h3>Examples</h3>
+<pre>
+  Welcome to my shop. Check out my items for sale...
+  Featured items...
+  
+  [item] ~b/o 10 chaos
+  [item] ~b/o 1.5 exalts
+  
+  Here's my gems... They are all 1c
+  
+  [spoiler="Gems ~b/o 1 chaos"]
+    I lied, this ones actually 5
+    [item] ~b/o 5 chaos
+  [/spoiler]
+  
+  Here's my armour....
+  [spoiler="~b/o 3 chaos"]
+    [item] ~b/o 5 chaos
+    (This one is special)
+    
+    [spoiler="Cheap ~b/o 1 chaos"]
+    [item]
+    [item]
+    This spoiler tag overrides the parent spoiler tag
+    [/spoiler]
+    
+    [item] This one is still 3 chaos
+    
+  [/spoiler]
+  
+  [item]
+  No buyout here, so it will default to global buyout
+  
+~gb/o 10 alts
+  
+</pre>

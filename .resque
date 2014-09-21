@@ -1,0 +1,1 @@
+queues: 'account_queue,index_queue,search_queue'

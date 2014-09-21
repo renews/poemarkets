@@ -1,0 +1,199 @@
+$input-color: #a38d6d;
+$input-bg: #333;
+$input-group-addon-bg: #111;
+$input-border:#232323;
+$input-border-focus: #666;
+$dropdown-bg: $input-bg;
+$dropdown-link-color: $input-color;
+$dropdown-link-hover-color: $input-color;
+$dropdown-link-hover-bg: $input-border;
+$pagination-color:$input-color;
+$pagination-bg:$input-bg;
+$pagination-border:#232323;
+$pagination-hover-color:$input-color;
+$pagination-hover-bg:#232323;
+$pagination-hover-border:#111;
+$pagination-disabled-bg:darker($input-bg, 20%);
+$pagination-disabled-color:darker($input-color, 20%);
+$pagination-disabled-border:$pagination-border;
+$pagination-active-bg:lighten($pagination-bg, 20%);
+$pagination-active-border:lighten($pagination-border, 20%);
+$screen-sm:1000px;
+$screen-md: 1200px;
+$screen-lg: 1400px;
+
+@import "bootstrap";
+//@import "bootstrap/theme";
+
+// make all images responsive by default
+img {
+  /* @extend .img-responsive;*/
+  margin: 0 auto;
+  }
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit;
+  }
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.form {
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
+
+// apply styles to HTML elements
+// to make views framework-neutral
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #111;
+	.container .text-muted {
+	  margin: 20px 0;
+	}
+}
+body {
+	background: asset-url('background.jpg') #000 top center no-repeat fixed;
+}
+main {
+  @extend .container;
+  padding-bottom: 80px;
+  width: 100%;
+	color: #a38d6d;
+  margin-top: 51px; // accommodate the navbar
+	.container {
+		background-color: #111;
+		border-left:1px solid #333;
+		border-right:1px solid #333;
+	}
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
+  }
+h1,h2,h3,h4,h5,h6,label {
+	font-family:'FontinSmallCaps';
+}
+label {
+	font-size:1.2em;
+	font-weight:normal;
+}
+.no-padding {
+	padding: 0 !important;
+}
+.input-group-addon {
+	min-width:80px;
+}
+.form-control {
+	background: #333;
+	color: #a38d6d;
+	width:100% !important;
+}
+.select-2-container, .select2-choice, .select2-drop, .select2-arrow {
+	background: #333;
+	color: #a38d6d;
+}
+.form-control.select2-container {
+	padding:0;
+	height: 34px;
+	.select2-choice {
+		position:relative;
+		bottom:3px;
+		border:1px solid #111;
+		background: #333;
+		color: #a38d6d;
+		height:36px;
+		line-height:36px;
+		.select2-arrow {
+			background: #333;
+			color: #a38d6d;
+		}
+	}
+	.select2-choice-active {
+		border-color: #666;
+		border:1px solid #666;
+	}
+}
+.select2-container-active, .select2-drop-active, .select2-drop.select2-drop-above.select2-drop-active,
+.select2-dropdown-open.select2-drop-above .select2-choice, .select2-dropdown-open.select2-drop-above .select2-choices {
+		border:1px solid #666;
+}
+.select2-dropdown-open .select2-choice {
+		-webkit-box-shadow: 0 1px 0 #666 inset;
+		box-shadow: 0 1px 0 #666 inset;
+}
+.btn.btn-default, .btn.btn-default.dropdown-toggle {
+	background-color: $input-bg;
+	color:$input-color;
+	border-color:$input-border;
+	&:hover {
+		background-color:$input-border;
+	}
+}
+.btn.btn-danger {
+	background-color: #960000;
+	border-color: darken(#960000, 20%);
+}
+.btn:focus {
+	outline:0;
+}
+.btn {
+	font-family: 'FontinSmallCaps';
+}
+form {
+	margin-bottom:3em;
+}
+#mod_template {
+	display:none;
+}
+div.modal-content {
+	background-color:#111;
+}
+.label {
+	color:#111;
+}
+.panel-default {
+	background-color: #111;
+	border-color:#666;
+	.panel-heading {
+		background-color:#222;
+	}
+	.panel-title {
+		color: $input-color;
+	}
+}
+.has-success input {
+	background-color:#dff0d8;
+	color:#3c763d;
+}
+.skyscraper-ad {
+	float:left;
+	position:fixed;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Path of Exile Markets" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Path of Exile Market Browser" %>">
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <div class="visible-sm visible-md visible-lg skyscraper-ad">
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- PoEMarkets Skyscraper -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:120px;height:600px"
+       data-ad-client="ca-pub-8021914776302743"
+       data-ad-slot="7265652498"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+  </div>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main role="main">
+      <div class="container">
+       <%= render 'layouts/messages' %>
+       <%= yield %>
+       </div>
+    </main>
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">v1.2.1 | Contact me on the <a href="http://www.pathofexile.com/forum/view-thread/820024">forum thread</a> | PoEMarkets is a fan-made application and is not affiliated with Path of Exile or Grinding Gear Games in any way.</p>
+      </div>
+    </div>
+    <%= javascript_include_tag "application" %>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-48994384-1', 'poemarkets.com');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

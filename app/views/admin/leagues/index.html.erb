@@ -1,0 +1,19 @@
+<%= link_to "Add New League", new_admin_league_path %>
+<table class="table">
+<thead>
+  <tr>
+    <th>League</th>
+    <th>Edit<th>
+    <th>Delete</th>
+  </tr>
+</thead>
+<tbody>
+  <% @leagues.each do |league| %>
+  <tr>
+    <th><%= league.name %></th>
+    <td>E</td>
+    <td><%= link_to "Delete", admin_league_path(league), method: :delete %></td>
+  </tr>
+  <% end %>
+</tbody>
+</table>

@@ -1,0 +1,90 @@
+<h1>Hi, <%=@seller.account_name%></h1>
+<p class="lead">Welcome to your control panel for PoEMarkets</p>
+<p>It's important you keep this page bookmarked and do not share it with others.</p>
+<p>This page will be improve with more seller features in future.</p>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Online Status</h3>
+      </div>
+      <div class="panel-body">
+        Your online status is
+        <% if @seller.online? %>
+          <span class="label label-success">Online</span>
+          <% else %>
+          <span class="label label-danger">Offline</span>
+        <% end %>
+        <br /><br />
+        <% if @seller.offline? %>
+          <%= form_tag('/seller/'+@seller.uuid+'/status', method: 'put') do %>
+          <%= label_tag(:duration, 'Go Online for') %>
+          <%= select_tag(:duration, options_for_select([['1 hour', 1], ['2 hours', 2], ['3 hours', 3]]), class: 'form-control')%><br/>
+          <%= submit_tag('Go Online', class: 'btn btn-block btn-default')%>
+          <% end %>
+        <% else %>
+          <% if @seller.online_until %>
+            <p>You will automatically become offline<br /> in <%= time_ago_in_words @seller.online_until %>.</p>
+            <%= form_tag('/seller/'+@seller.uuid+'/status', method: 'put') do %>
+            <%= label_tag(:duration, 'Extend my time online from now') %>
+            <%= select_tag(:duration, options_for_select([['1 hour', 1], ['2 hours', 2], ['3 hours', 3]]), class: 'form-control')%><br/>
+            <%= submit_tag('Extend', class: 'btn btn-block btn-default')%>
+            <% end %>
+            <%= form_tag('/seller/'+@seller.uuid+'/offline', method: 'put') do %>
+            <%= submit_tag('Go Offline Now', class: 'btn btn-block btn-default')%>
+            <% end %>
+          <% else %>
+            <p>Your online status was detected from the ladder. You do not need to manage your online status here manually, unless you fall off the ladder (top 15000 players in league).</p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your Shops</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <caption>Shops not updated in over 2 weeks are removed from the index. Bump your shop to ensure it stays active.</caption>
+        <thead>
+          <tr>
+            <th>Shop Thread</th>
+            <th>Last Updated by you</th>
+            <th>Last Indexed</th>
+            <th>Item Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @seller.shops.each do |shop| %>
+            <tr>
+              <td><a href="<%=shop.thread%>"><%=shop.thread%></a></td>
+              <td><%= time_ago_in_words shop.last_updated %> ago</td>
+              <td><%= time_ago_in_words shop.last_indexed %> ago</td>
+              <td><%= shop.items.count %></td>
+            </tr>
+          <% end %>
+        </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Preferred IGN</h3>
+      </div>
+      <div class="panel-body">
+        <%= form_tag('/seller/'+@seller.uuid+'/updateign', method: 'put') do %>
+          <%= label_tag(:preferredign, 'IGN') %>
+          <%= text_field_tag(:preferredign, @seller.ign, class: "form-control", required: "required") %><br/>
+          <p>Ensure you type this correctly!</p>
+          <%= submit_tag('Update', class: 'btn btn-default btn-block')%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,313 @@
+// Place all the styles related to the search controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$white-text-color: #c8c8c8;
+$magic-text-color: #88f;
+$crafted-text-color: #b4b4ff;
+$rare-text-color: rgb(255, 255, 119);
+$unique-text-color: #af6025;
+$gem-text-color: #1ba29b;
+$currency-text-color: #aa9e82;
+$physical-dmg-color: white;
+$fire-dmg-color: #960000;
+$cold-dmg-color: #366492;
+$lightning-dmg-color: gold;
+$chaos-dmg-color:#d02090;
+$corrupted-text-color:#d20000;
+
+select {
+	option.total {
+		color:red;
+	}
+}
+
+div.item {
+	color:white;
+	padding:0;
+	text-align: center;
+	border:1px solid gray;
+	background:#111;
+	.item-graphics {
+		margin:1% 0;
+		.item-icon {
+			background-color: black;
+			border:2px solid;
+			margin-bottom:5px;
+			&.rarity-0 {
+				border-color: darken($white-text-color, 20%);
+			}
+			&.rarity-1 {
+				border-color: darken($magic-text-color, 10%);
+			}
+			&.rarity-2 {
+				border-color: darken($rare-text-color, 50%);
+			}
+			&.rarity-3 {
+				border-color: darken($unique-text-color, 20%);
+			}
+			&.rarity-4 {
+				border-color: darken($gem-text-color, 20%);
+			}
+			&.rarity-5 {
+				border-color: darken($currency-text-color, 20%);
+			}
+		}
+		&:hover .sockets {
+		 visibility:hidden;
+		}
+	}
+	.item-box {
+		font-family: 'FontinSmallCaps', Verdana, Arial, sans-serif;
+		padding:0;
+		padding-bottom:1em;
+		background:black;
+		.attribute-label {
+			color: rgb(127, 127, 127);
+		}
+		.attribute-value {
+			color:white;
+		}
+	}
+	.item-header {
+		padding-top:1px;
+		margin-bottom:5px;
+		font-size:19px;
+		background-position:left center, right center, center;
+		background-repeat:no-repeat, no-repeat, repeat-x;
+		&.rarity-0 {
+			background-image: asset-url('ItemHeaderWhiteLeft.png'), asset-url('ItemHeaderWhiteRight.png'), asset-url('ItemHeaderWhiteMiddle.png');
+			color:$white-text-color;
+		}
+		&.rarity-1 {
+			background-image: asset-url('ItemHeaderMagicLeft.png'), asset-url('ItemHeaderMagicRight.png'), asset-url('ItemHeaderMagicMiddle.png');
+			color:$magic-text-color;
+		}
+		&.rarity-2 {
+			background-image: asset-url('ItemHeaderRareLeft.png'), asset-url('ItemHeaderRareRight.png'), asset-url('ItemHeaderRareMiddle.png');
+			color:$rare-text-color;
+		}
+		&.rarity-3 {
+			background-image: asset-url('ItemHeaderUniqueLeft.png'), asset-url('ItemHeaderUniqueRight.png'), asset-url('ItemHeaderUniqueMiddle.png');
+			color:$unique-text-color;
+		}
+		&.rarity-4 {
+			background-image: asset-url('ItemHeaderGemLeft.png'), asset-url('ItemHeaderGemRight.png'), asset-url('ItemHeaderGemMiddle.png');
+			color: $gem-text-color;
+		}
+		&.rarity-5 {
+			background-image: asset-url('ItemHeaderCurrencyLeft.png'), asset-url('ItemHeaderCurrencyRight.png'), asset-url('ItemHeaderCurrencyMiddle.png');
+			color:$currency-text-color;
+		}
+	}
+	.sockets {
+		position:absolute;
+		left:50%;
+		top:0;
+		&.w-1 {
+			width:47px;
+		}
+		&.w-2 {
+			width:94px;
+		}
+		z-index:1000;
+		.socket {
+			float:left;
+			width:47px;
+			height:47px;
+		}
+		.link {
+			position:absolute;
+			margin:0;
+			padding:0;
+		}
+		.link-1.link-h {
+			left:28px;
+			top:15px;
+		}
+		.link-2.link-h {
+			left:62px;
+			top:28px;
+		}
+		.link-3.link-h {
+			left:28px;
+			top:62px;
+		}
+		.link-1.link-v {
+			left:15.5px;
+			top:28px;
+		}
+		.link-2.link-v {
+			left:15.5px;
+			top:75px;
+		}
+		.link-4 {
+			left:15px;
+			top:76px;
+		}
+		.link-5 {
+			left:28px;
+			top:111px;
+		}
+		.socket-S {
+			background: asset-url('socket-s.png') center no-repeat;
+		}
+		.socket-D {
+			background: asset-url('socket-d.png') center no-repeat;
+		}
+		.socket-I {
+			background: asset-url('socket-i.png') center no-repeat;
+		}
+		.socket-G {
+			background: asset-url('socket-g.png') center no-repeat;
+		}
+		.socket-3 {
+			float:right;
+		}
+		.link-1.link-v, .link-2, .link-4 {
+			background: asset-url('link-vertical.png') center no-repeat;
+			width:16px;
+			height:38px;
+		}
+		.link-1.link-h,.link-3.link-h,.link-5 {
+			width:38px;
+			height:16px;
+			background: asset-url('link-horizontal.png') center no-repeat;
+		}
+	}
+	hr.separator {
+			color:black;
+			background-color:black;
+			height:6px;
+			border:0;
+			margin:0;
+		&.rarity-0 {
+			background: asset-url('SeparatorWhite.png') center no-repeat;
+		}
+		&.rarity-1 {
+			background: asset-url('SeparatorMagic.png') center no-repeat;
+		}
+		&.rarity-2 {
+			background: asset-url('SeparatorRare.png') center no-repeat;
+		}
+		&.rarity-3 {
+			background: asset-url('SeparatorUnique.png') center no-repeat;
+		}
+		&.rarity-4 {
+			background: asset-url('SeparatorGem.png') center no-repeat;
+		}
+		&.rarity-5 {
+			background: asset-url('SeparatorCurrency.png') center no-repeat;
+		}
+	}
+	.table th {
+		font-family: 'FontinSmallCaps', Verdana, Arial, sans-serif;
+		color: rgb(217, 217, 217);
+		border-color: rgb(47, 47, 47);
+		font-weight:normal;
+	}
+	.table thead th {
+		font-size:1.2em;
+	}
+	.table tbody td {
+		color:#a38d6d;
+		border-color: rgb(47, 47, 47);
+	}
+	.private-text {
+		color:$fire-dmg-color;
+	}
+	
+	.crafted span.mod {
+		color:$crafted-text-color;
+	}
+	.fire-dmg, .fire-dmg a.sort, .unidentified {
+		color:$fire-dmg-color;
+		border-color:$fire-dmg-color;
+	}
+	.cold-dmg, .cold-dmg a.sort {
+		color:$cold-dmg-color;
+		border-color:$cold-dmg-color;
+	}
+	.lightning-dmg, .lightning-dmg a.sort {
+		color:$lightning-dmg-color;
+		border-color:$lightning-dmg-color;
+	}
+	.chaos-dmg, .chaos-dmg a.sort {
+		color:$chaos-dmg-color;
+		border-color:$chaos-dmg-color;
+	}
+	a {
+		span {
+			border-bottom:1px dotted $magic-text-color;
+			&:hover {
+				text-decoration:none;
+				border:0;
+			}
+	  }
+		&:hover {
+			text-decoration:none;
+		}
+		&.attribute span {
+			color:white;
+			border-color:white;
+		}
+		.mod {
+			color: rgb(136, 136, 255);
+		}
+		&.sorted-by span {
+			border:0;
+			font-size:1.2em;
+			color:greenyellow !important;
+		}
+	}
+	button {
+		&.sorted-by span {
+			border:0;
+			font-size:1.2em;
+			color:greenyellow !important;
+		}
+	}
+	.gem-description {
+		color: $gem-text-color;
+	}
+	.corrupted-text {
+		color: $corrupted-text-color;
+	}
+}
+.back-to-top {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    display: none;
+		z-index:10000;
+}
+#page-ajax-loader {
+	position:fixed;
+	bottom:1em;
+	left:1em;
+	display:none;
+}
+.fire-text {
+	color: $fire-dmg-color;
+	span {
+		border-color: $fire-dmg-color !important;
+	}
+}
+.cold-text {
+	color: $cold-dmg-color;
+	span {
+		border-color: $cold-dmg-color !important;
+	}
+}
+.lightning-text {
+	color: $lightning-dmg-color;
+	span {
+		border-color: $lightning-dmg-color !important;
+	}
+}
+.chaos-text {
+	color: $chaos-dmg-color;
+	span {
+		border-color: $chaos-dmg-color !important;
+	}
+}
+

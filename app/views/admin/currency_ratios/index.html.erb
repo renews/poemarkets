@@ -1,0 +1,22 @@
+<table class="table">
+<thead>
+  <tr>
+    <th>League</th>
+    <th>Currency</td>
+    <td>Chaos Ratio</td>
+    <th>Edit<th>
+    <th>Delete</th>
+  </tr>
+</thead>
+<tbody>
+  <% @ratios.each do |ratio| %>
+  <tr>
+    <th><%= ratio.league.name %></th>
+    <td><%= ratio.currency.name %></td>
+    <td><%= ratio.chaos_ratio%>
+    <td>Edit</td>
+    <td><%= link_to "Delete", admin_currency_ratio_path(ratio), method: :delete %></td>
+  </tr>
+  <% end %>
+</tbody>
+</table>

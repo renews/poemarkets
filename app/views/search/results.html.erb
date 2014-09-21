@@ -1,0 +1,28 @@
+<span id="slug" style="display:none"><%= @search.slug %></span>
+<div style="float:right">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PoEMarkets Results -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:234px;height:60px"
+     data-ad-client="ca-pub-8021914776302743"
+     data-ad-slot="9485272094"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<h1 id="results-title">Results <span style="font-size:50%">
+<span class="label label-primary"><%= @league.region.name + '-' + @league.name %> League</span>
+<% if @params["order"] and !@params["order"].blank? %>
+<span class="label label-default">Ordered</span>
+<% end %>
+<%= "(#{@count} items)" if @count < 10  %>
+<%= "(Found Many) Scroll to load more" if @count == 10 %>
+</span> <i class="ajax-loader fa fa-cog fa-spin"></i>
+</h1>
+<% if @items and @count > 0 %>
+  <%= render partial: "results_page", layout: false %>
+<% else %>
+  <div id="no-more-items" class="alert alert-danger">Couldn't find any items with the criteria you selected. Try broadening your search.</p>
+<% end %>
+<a href="#" class="btn btn-lg btn-default back-to-top" data-no-turbolink="true">Back to Top</a>
+<div class="btn btn-lg btn-default" id="page-ajax-loader"><i class="fa fa-cog fa-spin"></i></div>
